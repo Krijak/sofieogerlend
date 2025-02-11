@@ -1,7 +1,11 @@
-import { Typography } from "@mui/material";
+import SofieErlend from "../../public/SofieErlend.svg";
 
 const Main = () => {
-  return <Typography variant="h1">SOFIE + ERLEND</Typography>;
+  return (
+    <>
+      <img src={SofieErlend} width={"500px"} alt="Sofie + Erlend" />
+    </>
+  );
 };
 
 export default Main;
