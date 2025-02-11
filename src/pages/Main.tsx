@@ -1,7 +1,11 @@
-import { Typography } from "@mui/material";
+import SE from "../../public/SE.svg";
 
 const Main = () => {
-  return <Typography variant="h1">SOFIE + ERLEND</Typography>;
+  return (
+    <>
+      <img src={SE} width={"500px"} alt="Sofie + Erlend" />
+    </>
+  );
 };
 
 export default Main;
