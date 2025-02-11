@@ -1,9 +1,9 @@
-import SE from "../../public/SE.svg";
+import SofieErlend from "../../public/SofieErlend.svg";
 
 const Main = () => {
   return (
     <>
-      <img src={SE} width={"500px"} alt="Sofie + Erlend" />
+      <img src={SofieErlend} width={"500px"} alt="Sofie + Erlend" />
     </>
   );
 };
