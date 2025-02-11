@@ -1,6 +1,7 @@
+import { Typography } from "@mui/material";
+
 const Fredag = () => {
-  console.log("freddan");
-  return <h1>Fredag</h1>;
+  return <Typography variant="h1">Fredag</Typography>;
 };
 
 export default Fredag;
