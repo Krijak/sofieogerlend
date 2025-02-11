@@ -1,21 +1,20 @@
+import "./App.css";
+import { HashRouter } from "react-router-dom";
+import { Route, Routes } from "react-router";
+import Fredag from "./pages/Fredag";
+import Main from "./pages/Main";
+import Topbar from "./Components/Topbar";
 
-import './App.css'
-
-import { Route, Routes} from 'react-router';
-import Fredag from './pages/Fredag';
-import Main from './pages/Main';
-import { BrowserRouter } from 'react-router-dom';
 function App() {
-
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="fredag" element={<Fredag />}>
-      </Route>
-    </Routes>
-  </BrowserRouter>
-  )
+    <HashRouter>
+      <Topbar />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/fredag" element={<Fredag />} />
+      </Routes>
+    </HashRouter>
+  );
 }
 
-export default App
+export default App;
