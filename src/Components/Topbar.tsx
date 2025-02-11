@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import MenuIcon from "@mui/icons-material/Menu";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Toolbar from "@mui/material/Toolbar";
 import { Stack, styled, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
@@ -25,7 +26,7 @@ const MenuItem = ({ title, href }: NavItem) => {
         className={({ isActive }) => (isActive ? "active" : "")}
         target={title == "Ønskeliste" ? "_blank" : "_self"}
       >
-        {title}
+        {title} {title == "Ønskeliste" && <OpenInNewIcon />}
       </NavLink>
     </StyledNavLinkWrapper>
   );
@@ -123,8 +124,14 @@ export default Topbar;
 const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
   "& >a": {
     color: "black",
+    display: "flex",
     ":hover": {
       color: theme.palette.primary.main,
+    },
+    svg: {
+      marginLeft: "8px",
+      fontSize: "0.9rem",
+      alignSelf: "center",
     },
   },
   "& > .active": {
