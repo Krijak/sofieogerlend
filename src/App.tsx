@@ -2,9 +2,6 @@ import "./App.css";
 import { HashRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import {
-  createMuiTheme,
-  createTheme,
-  ThemeOptions,
   ThemeProvider,
 } from "@mui/material/styles";
 import Topbar from "./Components/Topbar";
