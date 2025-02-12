@@ -43,10 +43,12 @@ export const theme = createTheme({
       fontSize: "1.6rem",
       fontWeight: 100,
       letterSpacing: "0.09em",
+      color: "#510629",
     },
     h2: {
       fontSize: "1rem",
       fontWeight: 600,
+      color: "#510629",
     },
   },
 });
