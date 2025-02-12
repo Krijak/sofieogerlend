@@ -9,7 +9,7 @@ import ListItem from "@mui/material/ListItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Toolbar from "@mui/material/Toolbar";
-import { Stack, styled, Typography } from "@mui/material";
+import { Button, Stack, styled, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 type NavItem = {
@@ -51,8 +51,12 @@ const Topbar = () => {
   const drawer = (
     <Stack
       onClick={handleDrawerToggle}
-      sx={{ textAlign: "center" }}
-      pl={4}
+      sx={{
+        textAlign: "center",
+        height: "100%",
+        justifyContent: "space-between",
+      }}
+      ml={4}
       mt={5}
     >
       <List>
@@ -62,6 +66,9 @@ const Topbar = () => {
           </ListItem>
         ))}
       </List>
+      <Button sx={{ marginRight: 4 }} onClick={() => handleDrawerToggle}>
+        Lukk
+      </Button>
     </Stack>
   );
 

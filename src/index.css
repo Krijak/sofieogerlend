@@ -56,6 +56,13 @@ button:focus-visible {
   outline: 1px dashed black;
 }
 
+a:focus,
+a:focus-visible {
+  outline: 1px dashed black;
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #000;
