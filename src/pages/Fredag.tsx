@@ -95,11 +95,11 @@ const Fredag = () => {
 
 export default Fredag;
 
-const StyledLeftSideStack = styled(Stack)(({ theme }) => ({
+const StyledLeftSideStack = styled(Stack)({
   minWidth: "100px",
   maxWidth: "100px",
   alignItems: "flex-end",
-}));
+});
 
 const StyledBox = styled(Stack)(({ theme }) => ({
   paddingLeft: theme.spacing(4),
