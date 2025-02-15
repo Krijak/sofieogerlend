@@ -45,6 +45,7 @@ const Topbar = () => {
     { title: "Fredag", href: "fredag" },
     { title: "Lørdag", href: "lørdag" },
     { title: "Transport og overnatting", href: "transportogovernatting" },
+    { title: "Rsvp", href: "rsvp" },
     { title: "Ønskeliste", href: "https://onsk.no/lister/km8-4le" },
   ];
 
@@ -98,7 +99,7 @@ const Topbar = () => {
             gap={3}
           >
             {navItems.map((item) => (
-              <MenuItem {...item} />
+              <MenuItem {...item} key={item.href} />
             ))}
           </Stack>
         </Toolbar>
