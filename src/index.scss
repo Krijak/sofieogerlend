@@ -119,13 +119,14 @@ a:focus-visible {
 
 .ff-widget-control, .rest-form-control {
   background: $inputBackground !important;
-
-
+  
+  
 }
 
 .ff-widget-control.ff-check-table{
   background: none!important;
   div {
+    padding-right: 20px;
     background: $inputBackground !important;
 
   }

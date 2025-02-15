@@ -79,7 +79,7 @@ const Topbar = () => {
       <AppBar
         component="nav"
         sx={{
-          background: "transparent",
+          background: (theme) => theme.palette.background.default,
           boxShadow: "none",
           ".MuiToolbar-root": { justifyContent: "flex-end" },
         }}
