@@ -117,6 +117,7 @@ const Topbar = () => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: (theme) => theme.palette.background.default,
             },
           }}
         >

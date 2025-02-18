@@ -1,26 +1,29 @@
 import { Box, Link, Stack, styled, Typography } from "@mui/material";
 import MSBruvik from "../../public/MSBruvik.jpg";
+import TimeLineItem from "../Components/TimeLineItem";
 
 const Fredag = () => {
   return (
     <>
       <Stack alignItems={"center"} mt={10}>
-        <Stack flexDirection={"row"} sx={{ marginTop: 10 }}>
-          <StyledLeftSideStack>
-            <Typography variant="h2">FREDAG</Typography>
-            <Typography
-              variant={"h1"}
-              sx={{ fontSize: { xs: "1.2rem", sm: "1.6rem" } }}
-              whiteSpace={"nowrap"}
-            >
-              29 / 08 / 25
-            </Typography>
-          </StyledLeftSideStack>
-          <StyledBox>
+        <Stack
+          alignItems={"flex-end"}
+          padding={5}
+          width={"100%"}
+          maxWidth={"500px"}
+        >
+          <Typography variant="h1" fontSize={"0.8rem"}>
+            FREDAG
+          </Typography>
+          <Typography variant="h2" fontSize={"1rem"}>
+            29 / 08 / 25
+          </Typography>
+
+          <Stack sx={{ marginTop: 10 }}>
             <Typography variant="h1" mb={3}>
               FJORD CRUISE - MS BRUVIK
             </Typography>
-            <Typography maxWidth={"600px"} marginBottom={{ sm: 15, xs: 10 }}>
+            <Typography maxWidth={"400px"}>
               Fredag ettermiddag drar vi ut på fjord cruise med MS Bruvik
               innover fantastiske Hjørundfjorden. Her vil man kunne se kremen av
               Sunnmøre - både fjord og fjell. Dette blir en fin anledning til å
@@ -30,67 +33,69 @@ const Fredag = () => {
               dekk og et stort utedekk akter. Vi håper så mange som mulig vil
               bli med oss på turen!
             </Typography>
-          </StyledBox>
+          </Stack>
         </Stack>
-        <Stack flexDirection={"row"}>
-          <StyledLeftSideStack>
-            <Typography variant="h2" whiteSpace={"nowrap"}>
-              17:00 - 21:00
-            </Typography>
-          </StyledLeftSideStack>
-          <StyledBox>
-            <Typography variant="h2" mb={1}>
-              Praktisk info
-            </Typography>
-            <PraktiskInfoP>
-              Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund Cruise
-              Terminal og Ålesund Bussterminal.{" "}
-              <Link href="https://www.google.com/maps/place/Cruise+Service+Fjord+Tours/@62.4702321,6.1549915,383m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4616db8adff3c02f:0x8c2a9a50ff2ca49a!8m2!3d62.4702321!4d6.1549915!16s%2Fg%2F11svh66vns?entry=tts&g_ep=EgoyMDI1MDEyMi4wIPu8ASoASAFQAw%3D%3D">
-                Klikk her for å se sted for oppmøtested i Google Maps.
-              </Link>
-            </PraktiskInfoP>
-            <PraktiskInfoP>
-              <b>Tidspunkt:</b> MS Bruvik segler kl 17:00, så møt i god tid før
-              dette!
-            </PraktiskInfoP>
-            <PraktiskInfoP>
-              <b>Varighet:</b> Turen varer en ca 4 timer.
-            </PraktiskInfoP>
-            <Typography sx={{ marginBottom: { sm: 30 } }}>
-              <b>Bekledning:</b> Casual, ta gjerne med varme klær til å stå ute
-              i.
-            </Typography>
-          </StyledBox>
-        </Stack>
-        <Stack flexDirection={"row"}>
-          <Box sx={{ width: "150px", display: { xs: "none", sm: "block" } }} />
+
+        <Stack
+          flexDirection={"row"}
+          flexWrap={"wrap"}
+          justifyContent={"center"}
+          width={"100%"}
+          mt={3}
+          sx={{
+            backgroundColor: "white",
+            padding: 5,
+          }}
+        >
           <Stack
-            alignItems={"flex-end"}
-            sx={{
-              width: { sm: "700px" },
-              marginTop: { sm: "-145px" },
-              paddingTop: { xs: 10 },
-            }}
+            gap={3}
+            maxWidth={"600px"}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+            flexDirection={"row"}
           >
-            <Box
-              ml={{ sm: 4, xs: 2 }}
-              pl={4}
-              style={{ maxWidth: "500px", minWidth: "300px" }}
-            >
-              <img alt="MS Bruvik" src={MSBruvik} width={"100%"} />
-              <Typography width={"300px"} mt={3}>
-                MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter,
-                bygget i 1949 ved Glommen Mekaniske Verksted i Fredrikstad.
-                Båten har plass til 153 passasjerer og tilbyr nostalgiske
-                fjordopplevelser i vakker sunnmørsk natur. Mannskapet deler
-                gjerne sin lokalkunnskap og båtens historie med passasjerene.{" "}
-                <Link href="https://www.cruise-service.no/bruvik">
-                  Les mer om MS Bruvik her.
-                </Link>
-              </Typography>
+            <Box>
+              <TimeLineItem
+                header={<Typography variant="h2">17 : 00 - 21 : 00</Typography>}
+              >
+                <Box mt={2}>
+                  <PraktiskInfoP>
+                    Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund
+                    Cruise Terminal og Ålesund Bussterminal.{" "}
+                    <Link href="https://www.google.com/maps/place/Cruise+Service+Fjord+Tours/@62.4702321,6.1549915,383m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4616db8adff3c02f:0x8c2a9a50ff2ca49a!8m2!3d62.4702321!4d6.1549915!16s%2Fg%2F11svh66vns?entry=tts&g_ep=EgoyMDI1MDEyMi4wIPu8ASoASAFQAw%3D%3D">
+                      Klikk her for å se sted for oppmøtested i Google Maps.
+                    </Link>
+                  </PraktiskInfoP>
+                  <PraktiskInfoP>
+                    <b>Tidspunkt:</b> MS Bruvik segler kl 17:00, så møt i god
+                    tid før dette!
+                  </PraktiskInfoP>
+                  <PraktiskInfoP>
+                    <b>Varighet:</b> Turen varer en ca 4 timer.
+                  </PraktiskInfoP>
+                  <Typography>
+                    <b>Bekledning:</b> Casual, ta gjerne med varme klær til å
+                    stå ute i.
+                  </Typography>
+                </Box>
+              </TimeLineItem>
             </Box>
           </Stack>
         </Stack>
+
+        <Box maxWidth={"500px"}>
+          <img alt="MS Bruvik" src={MSBruvik} width={"100%"} />
+        </Box>
+        <Typography width={"300px"} padding={5}>
+          MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter, bygget i
+          1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass til
+          153 passasjerer og tilbyr nostalgiske fjordopplevelser i vakker
+          sunnmørsk natur. Mannskapet deler gjerne sin lokalkunnskap og båtens
+          historie med passasjerene.{" "}
+          <Link href="https://www.cruise-service.no/bruvik">
+            Les mer om MS Bruvik her.
+          </Link>
+        </Typography>
       </Stack>
     </>
   );

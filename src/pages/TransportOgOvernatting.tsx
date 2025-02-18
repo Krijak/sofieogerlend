@@ -14,7 +14,7 @@ const TransportOgOvernatting = () => {
         >
           <img alt="Erlend og Sofie på båt" src={SEBaat} width={"100%"} />
         </Box>
-        <Stack maxWidth={"300px"} textAlign={"center"} mt={5}>
+        <Stack maxWidth={"300px"} mt={5}>
           <Typography variant="h1">OVERNATTING</Typography>
           <Typography mt={3}>
             Det finnes flere overnattingsmuligheter i nærheten av Ålesund og
@@ -43,7 +43,7 @@ const TransportOgOvernatting = () => {
           />
         </Stack>
         <Stack alignItems={"center"}>
-          <Box maxWidth={"300px"} textAlign={"center"} mt={10}>
+          <Box maxWidth={"300px"} mt={10}>
             <Typography variant="h1">TRANSPORT</Typography>
             <Typography mt={3}>
               For å gjøre dagen så enkel som mulig for alle, har vi arrangert
