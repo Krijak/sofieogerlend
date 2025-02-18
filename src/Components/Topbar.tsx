@@ -11,6 +11,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Toolbar from "@mui/material/Toolbar";
 import { Button, Stack, styled, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import SE from "../../public/SE.png";
 
 type NavItem = {
   title: string;
@@ -58,15 +59,21 @@ const Topbar = () => {
         justifyContent: "space-between",
       }}
       ml={4}
+      mr={4}
       mt={5}
     >
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item.href} disablePadding sx={{ marginBottom: 3 }}>
-            <MenuItem {...item} />
-          </ListItem>
-        ))}
-      </List>
+      <Box>
+        <Box mb={10}>
+          <img src={SE} width={"70px"} />
+        </Box>
+        <List>
+          {navItems.map((item) => (
+            <ListItem key={item.href} disablePadding sx={{ marginBottom: 3 }}>
+              <MenuItem {...item} />
+            </ListItem>
+          ))}
+        </List>
+      </Box>
       <Button sx={{ marginRight: 4 }} onClick={() => handleDrawerToggle}>
         Lukk
       </Button>

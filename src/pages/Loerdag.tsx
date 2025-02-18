@@ -52,12 +52,10 @@ const Loerdag = () => {
               >
                 <Typography mb={10} mt={2}>
                   <Link href="https://maps.app.goo.gl/TfHGsWy8UKy9Mvbm8">
-                    Giske Kirke,  Giskevegen 121, 6052 Giske
+                    Giske Kirke, Giskevegen 121, 6052 Giske
                   </Link>
                   <br />
-                  <b>LØRDAG 30.08, kl 13:00</b>
-                  <br />
-                  Vielsen blir ved  vakre Giske Kirke.Det vil bli arrangert
+                  Vielsen blir ved vakre Giske Kirke. Det vil bli arrangert
                   felles transport fra Ålesund sentrum.
                 </Typography>
               </TimeLineItem>
@@ -75,14 +73,11 @@ const Loerdag = () => {
                   </Link>
                   <br />
                   Etter vielsen drar vi over til Øygardshallen hvor den store
-                  bryllupsfesten skal være. Her vil det serveres noe lett
-                  bespisning ved ankomst.
+                  bryllupsfesten skal være.
+                  <br />
+                  <br />
+                  Her vil det serveres noe lett bespisning ved ankomst.
                 </Typography>
-              </TimeLineItem>
-              <TimeLineItem
-                header={<Typography variant="h2">14 : 30</Typography>}
-              >
-                <Typography marginBottom={2}>Lett servering</Typography>
               </TimeLineItem>
               <TimeLineItem
                 header={<Typography variant="h2">15 : 00</Typography>}
