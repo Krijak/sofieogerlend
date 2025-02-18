@@ -31,7 +31,7 @@ export const theme = createTheme({
     },
     background: {
       default: "#e5dee1",
-      paper: "#f8f7f8",
+      paper: "#5b2a45",
     },
     success: {
       main: "#547b57",
@@ -40,15 +40,21 @@ export const theme = createTheme({
   },
   typography: {
     h1: {
-      fontSize: "1.6rem",
+      fontSize: "1.1rem",
       fontWeight: 100,
       letterSpacing: "0.09em",
       color: "#510629",
+      xs: {
+        fontSize: "1rem",
+      },
     },
     h2: {
-      fontSize: "1rem",
+      fontSize: "0.8rem",
       fontWeight: 600,
       color: "#510629",
+    },
+    body1: {
+      fontSize: "1rem",
     },
   },
 });
