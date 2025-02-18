@@ -1,6 +1,7 @@
 import { Stack, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
 import TimeLineItem from "../Components/TimeLineItem";
+import Flowers from "../../public/Flowers.png";
 
 const Loerdag = () => {
   return (
@@ -9,6 +10,7 @@ const Loerdag = () => {
         <Stack
           alignItems={"flex-end"}
           padding={6}
+          paddingBottom={3}
           width={"100%"}
           maxWidth={"500px"}
         >
@@ -20,9 +22,7 @@ const Loerdag = () => {
           </Typography>
 
           <Stack sx={{ marginTop: 10 }} alignSelf={"flex-start"}>
-            <Typography variant="h1" mb={3}>
-              BRYLLUPSDAGEN
-            </Typography>
+            <Typography variant="h1">BRYLLUPSDAGEN</Typography>
           </Stack>
         </Stack>
 
@@ -31,7 +31,6 @@ const Loerdag = () => {
           flexWrap={"wrap"}
           justifyContent={"center"}
           width={"100%"}
-          mt={3}
           padding={5}
         >
           <Stack
@@ -41,7 +40,16 @@ const Loerdag = () => {
             justifyContent={"center"}
             flexDirection={"row"}
           >
-            <Box maxWidth={"400px"}>
+            <Stack
+              maxWidth={"400px"}
+              padding={7}
+              paddingBottom={0}
+              sx={{
+                backgroundColor: "white",
+                borderRadius: "4px",
+                overflow: "hidden",
+              }}
+            >
               <TimeLineItem
                 header={
                   <>
@@ -52,12 +60,10 @@ const Loerdag = () => {
               >
                 <Typography mb={10} mt={2}>
                   <Link href="https://maps.app.goo.gl/TfHGsWy8UKy9Mvbm8">
-                    Giske Kirke,  Giskevegen 121, 6052 Giske
+                    Giske Kirke, Giskevegen 121, 6052 Giske
                   </Link>
                   <br />
-                  <b>LØRDAG 30.08, kl 13:00</b>
-                  <br />
-                  Vielsen blir ved  vakre Giske Kirke.Det vil bli arrangert
+                  Vielsen blir ved vakre Giske Kirke. Det vil bli arrangert
                   felles transport fra Ålesund sentrum.
                 </Typography>
               </TimeLineItem>
@@ -75,14 +81,11 @@ const Loerdag = () => {
                   </Link>
                   <br />
                   Etter vielsen drar vi over til Øygardshallen hvor den store
-                  bryllupsfesten skal være. Her vil det serveres noe lett
-                  bespisning ved ankomst.
+                  bryllupsfesten skal være.
+                  <br />
+                  <br />
+                  Her vil det serveres noe lett bespisning ved ankomst.
                 </Typography>
-              </TimeLineItem>
-              <TimeLineItem
-                header={<Typography variant="h2">14 : 30</Typography>}
-              >
-                <Typography marginBottom={2}>Lett servering</Typography>
               </TimeLineItem>
               <TimeLineItem
                 header={<Typography variant="h2">15 : 00</Typography>}
@@ -117,7 +120,16 @@ const Loerdag = () => {
                   Busstransport til Ålesund sentrum
                 </Typography>
               </TimeLineItem>
-            </Box>
+              <Box
+                alignSelf={"flex-end"}
+                justifySelf={"flex-end"}
+                mt={3}
+                mb={-2}
+                mr={-3}
+              >
+                <img src={Flowers} width={"200px"} />
+              </Box>
+            </Stack>
           </Stack>
         </Stack>
       </Stack>

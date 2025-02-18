@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
-import SETeOne from "../../public/SETeOne.png";
 import SETeTwo from "../../public/SETeTwo.png";
-import SEBaat from "../../public/SEBaat.jpg";
+import Azores from "../../public/Azores.png";
+import Foss from "../../public/SofieErlend/Foss.png";
 
 const TransportOgOvernatting = () => {
   return (
@@ -9,12 +9,12 @@ const TransportOgOvernatting = () => {
       <Stack alignItems={"center"} mt={10}>
         <Box
           style={{ maxWidth: "400px", minWidth: "100px" }}
-          paddingLeft={6}
-          paddingRight={6}
+          paddingLeft={9}
+          paddingRight={9}
         >
-          <img alt="Erlend og Sofie på båt" src={SEBaat} width={"100%"} />
+          <img alt="Erlend og Sofie på båt" src={Foss} width={"100%"} />
         </Box>
-        <Stack maxWidth={"500px"} mt={4} padding={6}>
+        <Stack maxWidth={"600px"} mt={4} padding={6}>
           <Typography variant="h1">OVERNATTING</Typography>
           <Typography mt={3}>
             Det finnes flere overnattingsmuligheter i nærheten av Ålesund og
@@ -37,7 +37,7 @@ const TransportOgOvernatting = () => {
           />
           <img
             alt="Erlend og Sofie også på teplantasje"
-            src={SETeOne}
+            src={Azores}
             width={"30%"}
             height={"30%"}
           />
@@ -64,7 +64,7 @@ const TransportOgOvernatting = () => {
           }}
         >
           <Stack
-            gap={3}
+            gap={4}
             maxWidth={"900px"}
             flexWrap={"wrap"}
             justifyContent={"center"}
@@ -92,7 +92,7 @@ const TransportOgOvernatting = () => {
                 etter. 
               </Typography>
             </Box>
-            <Box maxWidth={"300px"}>
+            <Box maxWidth={"300px"} width={"100%"}>
               <Typography mb={1}>
                 <b>Taxi og annen transport</b>
               </Typography>
