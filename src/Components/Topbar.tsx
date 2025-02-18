@@ -74,9 +74,7 @@ const Topbar = () => {
           ))}
         </List>
       </Box>
-      <Button sx={{ marginRight: 4 }} onClick={() => handleDrawerToggle}>
-        Lukk
-      </Button>
+      <Button onClick={() => handleDrawerToggle}>Lukk</Button>
     </Stack>
   );
 

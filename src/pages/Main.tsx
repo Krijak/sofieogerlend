@@ -25,7 +25,7 @@ const Main = () => {
       </Box>
       <Box
         style={{
-          maxWidth: "500px",
+          maxWidth: "400px",
           minWidth: "100px",
         }}
         padding={6}
