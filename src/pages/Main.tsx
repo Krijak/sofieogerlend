@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
 import SofieErlend from "../../public/SofieErlend.png";
-import Foss from "../../public/SofieErlend/Foss.png";
 import Grein from "../../public/SofieErlend/Grein.png";
 import KlatringKyss from "../../public/SofieErlend/KlatringKyss.png";
 import SEBaat from "../../public/SofieErlend/SEBaat.png";
@@ -8,14 +7,7 @@ import FjellBak from "../../public/SofieErlend/FjellBak.png";
 import FjellForan from "../../public/SofieErlend/FjellForan.png";
 
 const Main = () => {
-  const images: string[] = [
-    Foss,
-    Grein,
-    KlatringKyss,
-    SEBaat,
-    FjellBak,
-    FjellForan,
-  ];
+  const images: string[] = [Grein, KlatringKyss, SEBaat, FjellBak, FjellForan];
   const randomImageIndex = Math.floor(Math.random() * images.length);
 
   return (
