@@ -8,7 +8,7 @@ const Fredag = () => {
       <Stack alignItems={"center"} mt={10}>
         <Stack
           alignItems={"flex-end"}
-          padding={5}
+          padding={6}
           width={"100%"}
           maxWidth={"500px"}
         >
@@ -44,7 +44,6 @@ const Fredag = () => {
           mt={3}
           sx={{
             backgroundColor: "white",
-            padding: 5,
           }}
         >
           <Stack
@@ -53,6 +52,7 @@ const Fredag = () => {
             flexWrap={"wrap"}
             justifyContent={"center"}
             flexDirection={"row"}
+            padding={6}
           >
             <Box>
               <TimeLineItem
@@ -85,17 +85,17 @@ const Fredag = () => {
 
         <Box maxWidth={"500px"}>
           <img alt="MS Bruvik" src={MSBruvik} width={"100%"} />
+          <Typography padding={5}>
+            MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter, bygget
+            i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass
+            til 153 passasjerer og tilbyr nostalgiske fjordopplevelser i vakker
+            sunnmørsk natur. Mannskapet deler gjerne sin lokalkunnskap og båtens
+            historie med passasjerene.{" "}
+            <Link href="https://www.cruise-service.no/bruvik">
+              Les mer om MS Bruvik her.
+            </Link>
+          </Typography>
         </Box>
-        <Typography width={"300px"} padding={5}>
-          MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter, bygget i
-          1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass til
-          153 passasjerer og tilbyr nostalgiske fjordopplevelser i vakker
-          sunnmørsk natur. Mannskapet deler gjerne sin lokalkunnskap og båtens
-          historie med passasjerene.{" "}
-          <Link href="https://www.cruise-service.no/bruvik">
-            Les mer om MS Bruvik her.
-          </Link>
-        </Typography>
       </Stack>
     </>
   );

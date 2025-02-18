@@ -1,7 +1,5 @@
 import { Stack, Typography, Link } from "@mui/material";
-import { StyledBox, StyledLeftSideStack, PraktiskInfoP } from "./Fredag";
-import { Box, styled } from "@mui/system";
-import SEBaat from "../../public/SEBaat.jpg";
+import { Box } from "@mui/system";
 import TimeLineItem from "../Components/TimeLineItem";
 
 const Loerdag = () => {
@@ -10,7 +8,7 @@ const Loerdag = () => {
       <Stack alignItems={"center"} mt={10}>
         <Stack
           alignItems={"flex-end"}
-          padding={5}
+          padding={6}
           width={"100%"}
           maxWidth={"500px"}
         >

@@ -54,7 +54,7 @@ export const theme = createTheme({
       color: "#510629",
     },
     body1: {
-      fontSize: "0.8rem",
+      fontSize: "1rem",
     },
   },
 });

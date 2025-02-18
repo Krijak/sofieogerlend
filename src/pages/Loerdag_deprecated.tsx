@@ -1,5 +1,9 @@
 import { Stack, Typography, Link } from "@mui/material";
-import { StyledBox, StyledLeftSideStack, PraktiskInfoP } from "./Fredag";
+import {
+  StyledBox,
+  StyledLeftSideStack,
+  PraktiskInfoP,
+} from "./Fredag_deprecated";
 import { Box, styled } from "@mui/system";
 import SEBaat from "../../public/SEBaat.jpg";
 

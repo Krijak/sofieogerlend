@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactNode } from "react";
-import { Box, Stack, styled, Typography } from "@mui/material";
+import { Box, Stack, styled } from "@mui/material";
 
 type TimelineItemType = {
   header: ReactNode;
@@ -34,10 +34,11 @@ const Dot = styled("div")(({ theme }) => ({
   borderRadius: "50%",
   marginLeft: "-2px",
   marginBottom: "4px",
+  marginTop: "4px",
 }));
 
-const Line = styled("span")(({ theme }) => ({
+const Line = styled("span")({
   borderLeft: "1px solid",
   borderColor: "#56012e33",
   height: "calc(100% - 4px)",
-}));
+});

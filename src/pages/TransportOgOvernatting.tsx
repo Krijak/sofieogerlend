@@ -6,7 +6,7 @@ import SEBaat from "../../public/SEBaat.jpg";
 const TransportOgOvernatting = () => {
   return (
     <>
-      <Stack alignItems={"center"} mt={10} padding={3}>
+      <Stack alignItems={"center"} mt={10}>
         <Box
           style={{ maxWidth: "400px", minWidth: "100px" }}
           paddingLeft={6}
@@ -14,7 +14,7 @@ const TransportOgOvernatting = () => {
         >
           <img alt="Erlend og Sofie på båt" src={SEBaat} width={"100%"} />
         </Box>
-        <Stack maxWidth={"300px"} mt={5}>
+        <Stack maxWidth={"500px"} mt={4} padding={6}>
           <Typography variant="h1">OVERNATTING</Typography>
           <Typography mt={3}>
             Det finnes flere overnattingsmuligheter i nærheten av Ålesund og
@@ -43,7 +43,7 @@ const TransportOgOvernatting = () => {
           />
         </Stack>
         <Stack alignItems={"center"}>
-          <Box maxWidth={"300px"} mt={10}>
+          <Box maxWidth={"500px"} mt={5} padding={6}>
             <Typography variant="h1">TRANSPORT</Typography>
             <Typography mt={3}>
               For å gjøre dagen så enkel som mulig for alle, har vi arrangert
@@ -51,55 +51,57 @@ const TransportOgOvernatting = () => {
             </Typography>
           </Box>
         </Stack>
-      </Stack>
-      <Stack
-        flexDirection={"row"}
-        mt={5}
-        flexWrap={"wrap"}
-        justifyContent={"center"}
-        sx={{
-          backgroundColor: (theme) => theme.palette.background.paper,
-          padding: 5,
-          color: "white",
-        }}
-      >
         <Stack
-          gap={3}
-          maxWidth={"600px"}
+          flexDirection={"row"}
+          mt={5}
           flexWrap={"wrap"}
           justifyContent={"center"}
-          flexDirection={"row"}
+          width={"100%"}
+          sx={{
+            backgroundColor: (theme) => theme.palette.background.paper,
+            padding: 5,
+            color: "white",
+          }}
         >
-          <Box maxWidth={"200px"}>
-            <Typography mb={1}>
-              <b>Buss til og fra bryllupet</b>
-            </Typography>
-            <Typography>
-              Vi har satt opp en buss som kjører fra Ålesund sentrum til Giske
-              Kirke før seremonien, og som kjører gjester tilbake på slutten av
-              kvelden. Tidspunkter og oppmøtested vil bli oppdatert nærmere
-              bryllupet.
-            </Typography>
-          </Box>
-          <Box maxWidth={"200px"}>
-            <Typography mb={1}>
-              <b>Parkering</b>
-            </Typography>
-            <Typography>
-              Det er gode parkeringsmuligheter ved både ved Giske Kirke og
-              bryllupslokalet Øygardshallen. Vi oppfordrer til samkjøring der
-              det er mulig. Det er fullt mulig å la bilen stå til dagen etter. 
-            </Typography>
-          </Box>
-          <Box maxWidth={"200px"}>
-            <Typography mb={1}>
-              <b>Taxi og annen transport</b>
-            </Typography>
-            <Typography>
-              Ålesund Taxi: 70 10 30 00 <br /> Norgestaxi:  08 000 <br /> FRAM:
-              Kollektivtransport i Ålesund
-            </Typography>
-          </Box>
+          <Stack
+            gap={3}
+            maxWidth={"900px"}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+            flexDirection={"row"}
+          >
+            <Box maxWidth={"300px"}>
+              <Typography mb={1}>
+                <b>Buss til og fra bryllupet</b>
+              </Typography>
+              <Typography>
+                Vi har satt opp en buss som kjører fra Ålesund sentrum til Giske
+                Kirke før seremonien, og som kjører gjester tilbake på slutten
+                av kvelden. Tidspunkter og oppmøtested vil bli oppdatert nærmere
+                bryllupet.
+              </Typography>
+            </Box>
+            <Box maxWidth={"300px"}>
+              <Typography mb={1}>
+                <b>Parkering</b>
+              </Typography>
+              <Typography>
+                Det er gode parkeringsmuligheter ved både ved Giske Kirke og
+                bryllupslokalet Øygardshallen. Vi oppfordrer til samkjøring der
+                det er mulig. Det er fullt mulig å la bilen stå til dagen
+                etter. 
+              </Typography>
+            </Box>
+            <Box maxWidth={"300px"}>
+              <Typography mb={1}>
+                <b>Taxi og annen transport</b>
+              </Typography>
+              <Typography>
+                Ålesund Taxi: 70 10 30 00 <br /> Norgestaxi:  08 000 <br />{" "}
+                FRAM: Kollektivtransport i Ålesund
+              </Typography>
+            </Box>
+          </Stack>
         </Stack>
       </Stack>
     </>
