@@ -6,7 +6,7 @@ import PageWrapper from "../Components/PageWrapper";
 const Informasjon = () => {
   return (
     <PageWrapper>
-      <Stack flexDirection={"row"} gap={1} paddingLeft={9} paddingRight={9}>
+      <Stack flexDirection={"row"} gap={1} marginLeft={8} marginRight={8}>
         <AnimatedImage
           style={{ maxWidth: "400px", minWidth: "100px" }}
           alt="Erlend og Sofie på båt"
@@ -30,7 +30,7 @@ const Informasjon = () => {
           <Link href="mailto:evastveit@gmail.com">evastveit@gmail.com</Link>
         </Typography>
         <Typography variant="h2" mt={4}>
-          TOASTMASTER OG TALER
+          TALER OG TOASTMASTER
         </Typography>
         <Typography mt={1}>Informasjon kommer</Typography>
         <Typography variant="h2" mt={4}>

@@ -1,4 +1,4 @@
-import { Stack, Typography, Link, Box, StackProps } from "@mui/material";
+import { Stack, Typography, Link, Box } from "@mui/material";
 import TimeLineItem from "../Components/TimeLineItem";
 import SydengateForan from "../../public/SydengateForan.jpg";
 import SydengateBak from "../../public/SydengateBak.jpg";
