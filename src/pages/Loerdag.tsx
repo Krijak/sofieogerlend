@@ -110,7 +110,7 @@ const Loerdag = () => {
           justifyContent={"center"}
           gap={2}
         >
-          <Box width={"50%"}>
+          <Stack width={"50%"}>
             <AnimatedImage
               className="scroll-animation"
               justifyContent={"flex-end"}
@@ -118,8 +118,11 @@ const Loerdag = () => {
               src={SydengateForan}
             />
             <Vielse mt={4} display={{ xs: "none", sm: "none", lg: "flex" }} />
-          </Box>
-          <Box width={{ xs: "30%", sm: "30%", lg: "50%" }}>
+          </Stack>
+          <Stack
+            width={{ xs: "30%", sm: "30%", lg: "50%" }}
+            justifyContent={"flex-end"}
+          >
             <AnimatedImage
               className="scroll-animation"
               justifyContent={"flex-end"}
@@ -130,7 +133,7 @@ const Loerdag = () => {
               mt={4}
               display={{ xs: "none", sm: "none", lg: "flex" }}
             />
-          </Box>
+          </Stack>
         </Stack>
 
         <AnimatedStack
