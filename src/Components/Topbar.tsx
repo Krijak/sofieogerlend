@@ -11,7 +11,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Toolbar from "@mui/material/Toolbar";
 import { Button, Stack, styled, Typography } from "@mui/material";
 import { NavLink, useLocation } from "react-router-dom";
-import SE from "../../public/SE.png";
+import SofieErlend from "../../public/SofieErlend.png";
 import SofieOgErlend from "../../public/SofieOgErlend.svg";
 
 type NavItem = {
@@ -21,7 +21,7 @@ type NavItem = {
 
 const MenuItem = ({ title, href }: NavItem) => {
   return (
-    <StyledNavLinkWrapper display={"inline"} variant="button" title={title}>
+    <StyledNavLinkWrapper display={"inline"} title={title}>
       <NavLink
         key={href}
         to={href}
@@ -36,7 +36,7 @@ const MenuItem = ({ title, href }: NavItem) => {
 
 const Topbar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const drawerWidth = 302;
+  const drawerWidth = 350;
   const isOnMain = useLocation().pathname == "/";
 
   const handleDrawerToggle = () => {
@@ -66,17 +66,27 @@ const Topbar = () => {
     >
       <Box>
         <Box mb={10}>
-          <img src={SE} width={"70px"} />
+          <img src={SofieErlend} width={"150px"} />
         </Box>
         <List>
           {navItems.map((item) => (
-            <ListItem key={item.href} disablePadding sx={{ marginBottom: 3 }}>
+            <ListItem
+              key={item.href}
+              disablePadding
+              sx={{
+                marginBottom: 1,
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <MenuItem {...item} />
             </ListItem>
           ))}
         </List>
       </Box>
-      <Button onClick={() => handleDrawerToggle}>Lukk</Button>
+      <Button sx={{ marginBottom: 3 }} onClick={() => handleDrawerToggle}>
+        Lukk
+      </Button>
     </Stack>
   );
 
@@ -103,12 +113,12 @@ const Topbar = () => {
             aria-label="åpne meny"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { lg: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Stack
-            sx={{ display: { xs: "none", sm: "flex" } }}
+            sx={{ display: { xs: "none", sm: "none", md: "none", lg: "flex" } }}
             flexDirection={"row"}
             gap={3}
           >
@@ -127,7 +137,7 @@ const Topbar = () => {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "flex", sm: "none" },
+            display: { xs: "flex", sm: "flex", md: "flex", lg: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -148,6 +158,10 @@ const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
   "& >a": {
     color: "black",
     display: "flex",
+    padding: "6px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    borderRadius: "20px",
     ":hover": {
       color: theme.palette.primary.main,
     },
@@ -159,6 +173,8 @@ const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
   },
   "& > .active": {
     fontWeight: "bold",
+    // border: "1px solid",
+    // borderColor: theme.palette.primary.main,
     color: theme.palette.primary.main,
   },
   "::after": {

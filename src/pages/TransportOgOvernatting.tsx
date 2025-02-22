@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import SETeTwo from "../../public/SETeTwo.png";
 import Azores from "../../public/Azores.png";
 import Foss from "../../public/SofieErlend/Foss.png";
+import FullWidthStack from "../Components/FullWidthStack";
 
 const TransportOgOvernatting = () => {
   return (
@@ -11,6 +12,7 @@ const TransportOgOvernatting = () => {
           style={{ maxWidth: "400px", minWidth: "100px" }}
           paddingLeft={9}
           paddingRight={9}
+          className="image-animation image"
         >
           <img alt="Erlend og Sofie på båt" src={Foss} width={"100%"} />
         </Box>
@@ -30,17 +32,22 @@ const TransportOgOvernatting = () => {
           justifyContent={"center"}
           gap={2}
         >
-          <img
-            alt="Erlend og Sofie på teplantasje "
-            src={SETeTwo}
-            width={"50%"}
-          />
-          <img
-            alt="Erlend og Sofie også på teplantasje"
-            src={Azores}
-            width={"30%"}
-            height={"30%"}
-          />
+          <Box width={"50%"}>
+            <img
+              className="image"
+              alt="Erlend og Sofie på teplantasje "
+              src={SETeTwo}
+              width={"100%"}
+            />
+          </Box>
+          <Box width={"30%"}>
+            <img
+              className="image"
+              alt="Erlend og Sofie også på teplantasje"
+              src={Azores}
+              width={"100%"}
+            />
+          </Box>
         </Stack>
         <Stack alignItems={"center"}>
           <Box maxWidth={"500px"} mt={5} padding={6}>
@@ -51,18 +58,7 @@ const TransportOgOvernatting = () => {
             </Typography>
           </Box>
         </Stack>
-        <Stack
-          flexDirection={"row"}
-          mt={5}
-          flexWrap={"wrap"}
-          justifyContent={"center"}
-          width={"100%"}
-          sx={{
-            backgroundColor: (theme) => theme.palette.background.paper,
-            padding: 5,
-            color: "white",
-          }}
-        >
+        <FullWidthStack>
           <Stack
             gap={4}
             maxWidth={"900px"}
@@ -102,7 +98,7 @@ const TransportOgOvernatting = () => {
               </Typography>
             </Box>
           </Stack>
-        </Stack>
+        </FullWidthStack>
       </Stack>
     </>
   );

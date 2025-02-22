@@ -1,38 +1,39 @@
 import { Box, Link, Stack, styled, Typography } from "@mui/material";
 import MSBruvik from "../../public/MSBruvik.jpg";
 import TimeLineItem from "../Components/TimeLineItem";
+import DayAndDate from "../Components/DayAndDate";
+import AnimatedImage from "../Components/Image";
+import FullWidthStack from "../Components/FullWidthStack";
 
 const Fredag = () => {
   return (
     <>
       <Stack alignItems={"center"} mt={10}>
         <Stack
-          alignItems={"flex-end"}
-          padding={6}
-          width={"100%"}
-          maxWidth={"500px"}
+          flexDirection={"row"}
+          alignItems={"end"}
+          flexWrap={"wrap-reverse"}
+          justifyContent={"center"}
+          gap={5}
         >
-          <Typography variant="h1" fontSize={"0.8rem"}>
-            FREDAG
-          </Typography>
-          <Typography variant="h2" fontSize={"1rem"}>
-            29 / 08 / 25
-          </Typography>
-
-          <Stack sx={{ marginTop: 10 }}>
-            <Typography variant="h1" mb={3}>
+          <AnimatedImage alt="MS Bruvik" src={MSBruvik} />
+          <Stack>
+            <DayAndDate day="Fredag" date="29 / 08 / 25">
               FJORD CRUISE - MS BRUVIK
-            </Typography>
-            <Typography maxWidth={"400px"}>
-              Fredag ettermiddag drar vi ut på fjord cruise med MS Bruvik
-              innover fantastiske Hjørundfjorden. Her vil man kunne se kremen av
-              Sunnmøre - både fjord og fjell. Dette blir en fin anledning til å
-              bli bedre kjent med bryllupsgjestene og vi ønsker at så mange som
-              mulig tar seg tid til dette. Det blir servert en velkomstdrink og
-              noe lett bespisning underveis. Båten har to salonger, bar på øvre
-              dekk og et stort utedekk akter. Vi håper så mange som mulig vil
-              bli med oss på turen!
-            </Typography>
+            </DayAndDate>
+
+            <Stack padding={6} pb={0} width={"100%"} maxWidth={"700px"}>
+              <Typography maxWidth={"600px"}>
+                Fredag ettermiddag drar vi ut på fjord cruise med MS Bruvik
+                innover fantastiske Hjørundfjorden. Her vil man kunne se kremen
+                av Sunnmøre - både fjord og fjell. Dette blir en fin anledning
+                til å bli bedre kjent med bryllupsgjestene og vi ønsker at så
+                mange som mulig tar seg tid til dette. Det blir servert en
+                velkomstdrink og noe lett bespisning underveis. Båten har to
+                salonger, bar på øvre dekk og et stort utedekk akter. Vi håper
+                så mange som mulig vil bli med oss på turen!
+              </Typography>
+            </Stack>
           </Stack>
         </Stack>
 
@@ -41,10 +42,6 @@ const Fredag = () => {
           flexWrap={"wrap"}
           justifyContent={"center"}
           width={"100%"}
-          mt={3}
-          sx={{
-            backgroundColor: "white",
-          }}
         >
           <Stack
             gap={3}
@@ -83,19 +80,20 @@ const Fredag = () => {
           </Stack>
         </Stack>
 
-        <Box maxWidth={"500px"}>
-          <img alt="MS Bruvik" src={MSBruvik} width={"100%"} />
-          <Typography padding={5}>
-            MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter, bygget
-            i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass
-            til 153 passasjerer og tilbyr nostalgiske fjordopplevelser i vakker
-            sunnmørsk natur. Mannskapet deler gjerne sin lokalkunnskap og båtens
-            historie med passasjerene.{" "}
-            <Link href="https://www.cruise-service.no/bruvik">
-              Les mer om MS Bruvik her.
-            </Link>
-          </Typography>
-        </Box>
+        <FullWidthStack>
+          <Box maxWidth={"500px"}>
+            <Typography padding={5}>
+              MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter,
+              bygget i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten
+              har plass til 153 passasjerer og tilbyr nostalgiske
+              fjordopplevelser i vakker sunnmørsk natur. Mannskapet deler gjerne
+              sin lokalkunnskap og båtens historie med passasjerene.{" "}
+              <Link href="https://www.cruise-service.no/bruvik">
+                Les mer om MS Bruvik her.
+              </Link>
+            </Typography>
+          </Box>
+        </FullWidthStack>
       </Stack>
     </>
   );

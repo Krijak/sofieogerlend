@@ -2,28 +2,38 @@ import { Stack, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
 import TimeLineItem from "../Components/TimeLineItem";
 import Flowers from "../../public/Flowers.png";
+import SETeTwo from "../../public/SETeTwo.png";
+import Azores from "../../public/Azores.png";
+import DayAndDate from "../Components/DayAndDate";
+import AnimatedImage from "../Components/Image";
 
 const Loerdag = () => {
   return (
     <>
       <Stack alignItems={"center"} mt={10}>
-        <Stack
-          alignItems={"flex-end"}
-          padding={6}
-          paddingBottom={3}
-          width={"100%"}
-          maxWidth={"500px"}
-        >
-          <Typography variant="h1" fontSize={"0.8rem"}>
-            LØRDAG
-          </Typography>
-          <Typography variant="h2" fontSize={"1rem"}>
-            30 / 08 / 25
-          </Typography>
+        <DayAndDate day="Lørdag" date="30 / 08 / 25">
+          BRYLLUPSDAGEN
+        </DayAndDate>
 
-          <Stack sx={{ marginTop: 10 }} alignSelf={"flex-start"}>
-            <Typography variant="h1">BRYLLUPSDAGEN</Typography>
-          </Stack>
+        <Stack
+          style={{ maxWidth: "800px", minWidth: "200px" }}
+          mt={10}
+          flexDirection={"row"}
+          justifyContent={"center"}
+          gap={2}
+        >
+          <AnimatedImage
+            justifyContent={"flex-end"}
+            width={"50%"}
+            alt="Erlend og Sofie på teplantasje"
+            src={SETeTwo}
+          />
+          <AnimatedImage
+            justifyContent={"flex-end"}
+            width={"30%"}
+            alt="Erlend og Sofie også på teplantasje"
+            src={Azores}
+          />
         </Stack>
 
         <Stack
