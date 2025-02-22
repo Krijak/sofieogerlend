@@ -16,15 +16,15 @@ const Fredag = () => {
           flexWrap={"wrap-reverse"}
           justifyContent={"center"}
           mb={{ lg: 10 }}
-          gap={{ xs: 10, sm: 10, lg: 0 }}
         >
           <AnimatedImage
+            mt={10}
             maxWidth={"700px"}
             alt="MS Bruvik"
             src={MSBruvik}
             className="scroll-animation"
           />
-          <Stack padding={6} pb={0}>
+          <Stack pl={6} pr={6}>
             <DayAndDate day="Fredag" date="29 / 08 / 25">
               FJORD CRUISE
             </DayAndDate>

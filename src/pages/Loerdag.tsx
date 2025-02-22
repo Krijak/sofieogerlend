@@ -4,66 +4,28 @@ import SydengateForan from "../../public/SydengateForan.jpg";
 import SydengateBak from "../../public/SydengateBak.jpg";
 import DayAndDate from "../Components/DayAndDate";
 import AnimatedImage from "../Components/AnimatedImage";
-import { PropsWithChildren } from "react";
 import AnimatedStack from "../Components/AnimatedStack";
 import PageWrapper from "../Components/PageWrapper";
 
-type VielseBryllupsfestType = {
-  time: string;
-  header: string;
-} & PropsWithChildren &
-  StackProps;
-
-const VielseBryllupsfest = ({
-  time,
-  header,
-  children,
-  ...restProps
-}: VielseBryllupsfestType) => {
-  return (
-    <Stack className="scroll-animation" width={"300px"} {...restProps}>
-      <Typography variant="h2">{time}</Typography>
-      <Typography variant="h1">{header}</Typography>
-      <Typography mb={10} mt={3}>
-        {children}
-      </Typography>
-    </Stack>
-  );
-};
-
-const Bryllupsfest = (props: StackProps) => {
-  return (
-    <VielseBryllupsfest time="14 : 30" header="BRYLLUPSFEST" {...props}>
-      <Link href="https://maps.app.goo.gl/yoWSAJcg2W5mFSXd8">
-        Øygardshallen, Sjøvegen 77, 6052 Giske
-      </Link>
-      <br />
-      Etter vielsen drar vi over til Øygardshallen hvor den store bryllupsfesten
-      skal være.
-      <br />
-      <br />
-      Her vil det serveres noe lett bespisning ved ankomst.
-      <TimeLine />
-    </VielseBryllupsfest>
-  );
-};
-
-const Vielse = (props: StackProps) => {
-  return (
-    <VielseBryllupsfest time="13 : 00" header="VIELSE" {...props}>
-      <Link href="https://maps.app.goo.gl/TfHGsWy8UKy9Mvbm8">
-        Giske Kirke, Giskevegen 121, 6052 Giske
-      </Link>
-      <br />
-      Vielsen blir ved vakre Giske Kirke. Det vil bli arrangert felles transport
-      fra Ålesund sentrum.
-    </VielseBryllupsfest>
-  );
-};
-
 const TimeLine = () => {
   return (
-    <Box mt={10}>
+    <Box padding={6} pt={3}>
+      <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
+        <Box mb={4}>
+          <Typography variant="h2">VIELSE</Typography>
+          <Link mb={4} href="https://maps.app.goo.gl/TfHGsWy8UKy9Mvbm8">
+            Giske Kirke, Giskevegen 121, 6052 Giske
+          </Link>
+        </Box>
+      </TimeLineItem>
+      <TimeLineItem header={<Typography variant="h2">14 : 30</Typography>}>
+        <Box pb={4}>
+          <Typography variant="h2">BRYLLUPSFEST</Typography>
+          <Link href="https://maps.app.goo.gl/yoWSAJcg2W5mFSXd8">
+            Øygardshallen, Sjøvegen 77, 6052 Giske
+          </Link>
+        </Box>
+      </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
         <Typography marginBottom={2}>Leker</Typography>
       </TimeLineItem>
@@ -98,10 +60,22 @@ const Loerdag = () => {
         <DayAndDate
           day="Lørdag"
           date="30 / 08 / 25"
-          ml={{ xs: 6, sm: 6, lg: 0 }}
+          pl={{ xs: 6, sm: 6, lg: 0 }}
         >
           BRYLLUPSDAGEN
         </DayAndDate>
+        <Box
+          ml={{ xs: 6, sm: 6, lg: 0 }}
+          mr={{ xs: 6, sm: 6, lg: 0 }}
+          maxWidth={"500px"}
+        >
+          <Typography>
+            Vielsen blir ved vakre Giske Kirke. Det vil bli arrangert felles
+            transport fra Ålesund sentrum. Etter vielsen drar vi over til
+            Øygardshallen hvor den store bryllupsfesten skal være. Her vil det
+            serveres noe lett bespisning ved ankomst.
+          </Typography>
+        </Box>
 
         <Stack
           style={{ maxWidth: "800px", minWidth: "200px" }}
@@ -113,26 +87,20 @@ const Loerdag = () => {
           <Stack width={"50%"}>
             <AnimatedImage
               className="scroll-animation"
-              justifyContent={"flex-end"}
               alt="Erlend og Sofie på teplantasje"
               src={SydengateForan}
             />
-            <Vielse mt={4} display={{ xs: "none", sm: "none", lg: "flex" }} />
           </Stack>
-          <Stack
-            width={{ xs: "30%", sm: "30%", lg: "50%" }}
-            justifyContent={"flex-end"}
-          >
+          <Stack width={{ xs: "30%", sm: "30%", lg: "50%" }}>
             <AnimatedImage
               className="scroll-animation"
               justifyContent={"flex-end"}
               alt="Erlend og Sofie også på teplantasje"
               src={SydengateBak}
             />
-            <Bryllupsfest
-              mt={4}
-              display={{ xs: "none", sm: "none", lg: "flex" }}
-            />
+            <Box pt={4} display={{ xs: "none", sm: "none", lg: "flex" }}>
+              <TimeLine />
+            </Box>
           </Stack>
         </Stack>
 
@@ -147,8 +115,7 @@ const Loerdag = () => {
           mt={7}
           pb={0}
         >
-          <Vielse />
-          <Bryllupsfest />
+          <TimeLine />
         </AnimatedStack>
       </Stack>
     </PageWrapper>

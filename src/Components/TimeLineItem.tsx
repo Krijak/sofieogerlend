@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactNode } from "react";
-import { Box, Stack, styled } from "@mui/material";
+import { Box, Stack, StackProps, styled } from "@mui/material";
 
 type TimelineItemType = {
   header?: ReactNode;
@@ -10,9 +10,10 @@ export const TimeLineItem = ({
   header,
   isLast,
   children,
-}: TimelineItemType) => {
+  ...restProps
+}: TimelineItemType & StackProps) => {
   return (
-    <Stack flexDirection={"row"}>
+    <Stack flexDirection={"row"} {...restProps}>
       {header && <Box whiteSpace={"nowrap"}>{header}</Box>}
       <Stack whiteSpace={"nowrap"} marginRight={2} marginLeft={2}>
         <Box mb="4px" mt="4px">
