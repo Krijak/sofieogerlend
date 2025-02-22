@@ -10,8 +10,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Toolbar from "@mui/material/Toolbar";
 import { Button, Stack, styled, Typography } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import SE from "../../public/SE.png";
+import SofieOgErlend from "../../public/SofieOgErlend.svg";
 
 type NavItem = {
   title: string;
@@ -36,6 +37,7 @@ const MenuItem = ({ title, href }: NavItem) => {
 const Topbar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const drawerWidth = 302;
+  const isOnMain = useLocation().pathname == "/";
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -86,10 +88,17 @@ const Topbar = () => {
         sx={{
           background: (theme) => theme.palette.background.default,
           boxShadow: "none",
-          ".MuiToolbar-root": { justifyContent: "flex-end" },
+          ".MuiToolbar-root": {
+            justifyContent: isOnMain ? "flex-end" : "space-between",
+          },
         }}
       >
         <Toolbar>
+          {!isOnMain && (
+            <Box ml={2}>
+              <img src={SofieOgErlend} width={"200px"} />
+            </Box>
+          )}
           <IconButton
             aria-label="åpne meny"
             edge="start"

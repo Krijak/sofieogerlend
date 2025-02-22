@@ -1,5 +1,6 @@
 import { Box, Stack } from "@mui/material";
-import SofieErlend from "../../public/SofieErlend.png";
+import SE from "../../public/SE.png";
+import SofieOgErlend from "../../public/SofieOgErlend.svg";
 import Grein from "../../public/SofieErlend/Grein.png";
 import KlatringKyss from "../../public/SofieErlend/KlatringKyss.png";
 import SEBaat from "../../public/SofieErlend/SEBaat.png";
@@ -12,22 +13,26 @@ const Main = () => {
 
   return (
     <Stack alignItems={"center"}>
-      <Box width={{ xs: "170px", sm: "250px" }}>
-        <img src={SofieErlend} alt="Sofie + Erlend" width={"100%"} />
+      <Box width={{ xs: "100px", sm: "100px" }}>
+        <img src={SE} alt="Sofie + Erlend" width={"100%"} />
       </Box>
       <Box
         style={{
-          maxWidth: "400px",
+          maxWidth: "600px",
           minWidth: "100px",
         }}
         padding={6}
-        paddingTop={4}
+        paddingBottom={{ xs: 2, sm: 6 }}
+        paddingTop={{ xs: 2, sm: 4 }}
       >
         <img
           alt="Sofie og Erlend"
           src={images[randomImageIndex]}
           width={"100%"}
         />
+      </Box>
+      <Box width={{ xs: "170px", sm: "250px" }}>
+        <img src={SofieOgErlend} alt="Sofie og Erlend" width={"100%"} />
       </Box>
     </Stack>
   );
