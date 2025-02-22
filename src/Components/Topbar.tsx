@@ -48,6 +48,7 @@ const Topbar = () => {
     { title: "Fredag", href: "fredag" },
     { title: "Lørdag", href: "lørdag" },
     { title: "Transport og overnatting", href: "transportogovernatting" },
+    { title: "Informasjon", href: "informasjon" },
     { title: "Rsvp", href: "rsvp" },
     { title: "Ønskeliste", href: "https://onsk.no/lister/km8-4le" },
   ];

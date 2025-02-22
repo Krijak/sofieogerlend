@@ -4,29 +4,32 @@ import TimeLineItem from "../Components/TimeLineItem";
 import DayAndDate from "../Components/DayAndDate";
 import AnimatedImage from "../Components/AnimatedImage";
 import FullWidthStack from "../Components/FullWidthStack";
+import PageWrapper from "../Components/PageWrapper";
 
 const Fredag = () => {
   return (
-    <>
-      <Stack alignItems={"center"} mt={10}>
+    <PageWrapper>
+      <Stack>
         <Stack
           flexDirection={"row"}
           alignItems={"end"}
           flexWrap={"wrap-reverse"}
           justifyContent={"center"}
-          gap={5}
+          mb={{ lg: 10 }}
+          gap={{ xs: 10, sm: 10, lg: 0 }}
         >
           <AnimatedImage
+            maxWidth={"700px"}
             alt="MS Bruvik"
             src={MSBruvik}
             className="scroll-animation"
           />
-          <Stack>
+          <Stack padding={6} pb={0}>
             <DayAndDate day="Fredag" date="29 / 08 / 25">
-              FJORD CRUISE - MS BRUVIK
+              FJORD CRUISE
             </DayAndDate>
 
-            <Stack padding={6} pb={0} width={"100%"} maxWidth={"700px"}>
+            <Stack width={"100%"} maxWidth={"700px"}>
               <Typography maxWidth={"600px"}>
                 Fredag ettermiddag drar vi ut på fjord cruise med MS Bruvik
                 innover fantastiske Hjørundfjorden. Her vil man kunne se kremen
@@ -40,66 +43,68 @@ const Fredag = () => {
             </Stack>
           </Stack>
         </Stack>
+        <Stack
+          mt={5}
+          ml={{ sm: 0, lg: "690px" }}
+          padding={6}
+          paddingTop={{ lg: 0 }}
+          alignItems={{ sm: "center", lg: "flex-start" }}
+        >
+          <TimeLineItem>
+            <Box>
+              <Typography variant="h2" mb={2}>
+                17 : 00
+              </Typography>
+              <PraktiskInfoP>
+                Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund
+                Cruise Terminal og Ålesund Bussterminal.{" "}
+                <Link href="https://www.google.com/maps/place/Cruise+Service+Fjord+Tours/@62.4702321,6.1549915,383m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4616db8adff3c02f:0x8c2a9a50ff2ca49a!8m2!3d62.4702321!4d6.1549915!16s%2Fg%2F11svh66vns?entry=tts&g_ep=EgoyMDI1MDEyMi4wIPu8ASoASAFQAw%3D%3D">
+                  Klikk her for å se sted for oppmøtested i Google Maps.
+                </Link>
+              </PraktiskInfoP>
+              <PraktiskInfoP>
+                <b>Tidspunkt:</b> MS Bruvik segler kl 17:00, så møt i god tid
+                før dette!
+              </PraktiskInfoP>
+              <PraktiskInfoP>
+                <b>Varighet:</b> Turen varer ca 4 timer.
+              </PraktiskInfoP>
+              <Typography>
+                <b>Bekledning:</b> Casual, ta gjerne med varme klær til å stå
+                ute i.
+              </Typography>
+            </Box>
+          </TimeLineItem>
+        </Stack>
 
         <Stack
           flexDirection={"row"}
           flexWrap={"wrap"}
-          justifyContent={"center"}
+          justifyContent={{
+            xs: "center",
+            sm: "center",
+            md: "center",
+            lg: "flex-start",
+          }}
           width={"100%"}
-        >
-          <Stack
-            gap={3}
-            maxWidth={"600px"}
-            flexWrap={"wrap"}
-            justifyContent={"center"}
-            flexDirection={"row"}
-            padding={6}
-          >
-            <Box>
-              <TimeLineItem
-                header={<Typography variant="h2">17 : 00</Typography>}
-              >
-                <Box>
-                  <PraktiskInfoP>
-                    Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund
-                    Cruise Terminal og Ålesund Bussterminal.{" "}
-                    <Link href="https://www.google.com/maps/place/Cruise+Service+Fjord+Tours/@62.4702321,6.1549915,383m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4616db8adff3c02f:0x8c2a9a50ff2ca49a!8m2!3d62.4702321!4d6.1549915!16s%2Fg%2F11svh66vns?entry=tts&g_ep=EgoyMDI1MDEyMi4wIPu8ASoASAFQAw%3D%3D">
-                      Klikk her for å se sted for oppmøtested i Google Maps.
-                    </Link>
-                  </PraktiskInfoP>
-                  <PraktiskInfoP>
-                    <b>Tidspunkt:</b> MS Bruvik segler kl 17:00, så møt i god
-                    tid før dette!
-                  </PraktiskInfoP>
-                  <PraktiskInfoP>
-                    <b>Varighet:</b> Turen varer en ca 4 timer.
-                  </PraktiskInfoP>
-                  <Typography>
-                    <b>Bekledning:</b> Casual, ta gjerne med varme klær til å
-                    stå ute i.
-                  </Typography>
-                </Box>
-              </TimeLineItem>
-            </Box>
-          </Stack>
-        </Stack>
-
-        <FullWidthStack>
-          <Box maxWidth={"600px"}>
-            <Typography padding={5}>
-              MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter,
-              bygget i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten
-              har plass til 153 passasjerer og tilbyr nostalgiske
-              fjordopplevelser i vakker sunnmørsk natur. Mannskapet deler gjerne
-              sin lokalkunnskap og båtens historie med passasjerene.{" "}
-              <Link href="https://www.cruise-service.no/bruvik">
-                Les mer om MS Bruvik her.
-              </Link>
-            </Typography>
-          </Box>
-        </FullWidthStack>
+        ></Stack>
       </Stack>
-    </>
+
+      <FullWidthStack mt={{ xs: 0, sm: 0, lg: 10 }}>
+        <Box maxWidth={"600px"}>
+          <Typography padding={5}>
+            MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter, bygget
+            i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass
+            til 153 passasjerer og tilbyr nostalgiske fjordopplevelser i vakker
+            sunnmørsk natur. Mannskapet deler gjerne sin lokalkunnskap og båtens
+            historie med passasjerene.{" "}
+            <Link href="https://www.cruise-service.no/bruvik">
+              Les mer om MS Bruvik her.
+            </Link>
+          </Typography>
+        </Box>
+      </FullWidthStack>
+    </PageWrapper>
   );
 };
 

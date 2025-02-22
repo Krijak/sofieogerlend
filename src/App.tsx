@@ -6,6 +6,7 @@ import Topbar from "./Components/Topbar";
 import Main from "./pages/Main";
 import Fredag from "./pages/Fredag";
 import Loerdag from "./pages/Loerdag";
+import Informasjon from "./pages/Informasjon";
 import TransportOgOvernatting from "./pages/TransportOgOvernatting";
 import theme from "./theme";
 import Rsvp from "./pages/Rsvp";
@@ -16,6 +17,7 @@ const Wrapper = ({ children }: PropsWithChildren) => {
   const location = useLocation();
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+      console.log(entry);
       if (entry.isIntersecting) {
         entry.target.classList.add("scroll-animation");
       } else {
@@ -46,6 +48,7 @@ function App() {
             <Route path="/submited" element={<Submited />} />
             <Route path="/fredag" element={<Fredag />} />
             <Route path="/lørdag" element={<Loerdag />} />
+            <Route path="/informasjon" element={<Informasjon />} />
             <Route
               path="/transportogovernatting"
               element={<TransportOgOvernatting />}

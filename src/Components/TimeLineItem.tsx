@@ -2,7 +2,7 @@ import { PropsWithChildren, ReactNode } from "react";
 import { Box, Stack, styled } from "@mui/material";
 
 type TimelineItemType = {
-  header: ReactNode;
+  header?: ReactNode;
   isLast?: boolean;
 } & PropsWithChildren;
 
@@ -13,9 +13,11 @@ export const TimeLineItem = ({
 }: TimelineItemType) => {
   return (
     <Stack flexDirection={"row"}>
-      <Box whiteSpace={"nowrap"}>{header}</Box>
-      <Stack whiteSpace={"nowrap"} paddingRight={2} paddingLeft={2}>
-        <Dot />
+      {header && <Box whiteSpace={"nowrap"}>{header}</Box>}
+      <Stack whiteSpace={"nowrap"} marginRight={2} marginLeft={2}>
+        <Box mb="4px" mt="4px">
+          <Dot />
+        </Box>
         {!isLast && <Line />}
       </Stack>
       <Box>
@@ -32,9 +34,7 @@ const Dot = styled("div")(({ theme }) => ({
   width: "6px",
   height: "6px",
   borderRadius: "50%",
-  marginBottom: "4px",
   marginLeft: "-3px",
-  marginTop: "4px",
   opacity: "40%",
 }));
 

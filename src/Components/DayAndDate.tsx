@@ -1,14 +1,20 @@
-import { Stack, styled, Typography } from "@mui/material";
+import { Stack, StackProps, styled, Typography } from "@mui/material";
 import { PropsWithChildren } from "react";
 
 type DayAndDateType = {
   day: string;
   date: string;
-} & PropsWithChildren;
+} & PropsWithChildren &
+  StackProps;
 
-export const DayAndDate = ({ day, date, children }: DayAndDateType) => {
+export const DayAndDate = ({
+  day,
+  date,
+  children,
+  ...restProps
+}: DayAndDateType) => {
   return (
-    <Wrapper padding={6} paddingBottom={3}>
+    <Wrapper padding={6} pl={0} paddingBottom={3} {...restProps}>
       <Day variant="h3">{day}</Day>
       <Date variant="h2" fontSize={"1rem"}>
         {date}

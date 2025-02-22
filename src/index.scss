@@ -18,15 +18,6 @@ $white: #fff;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: $darkRed;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -34,6 +25,20 @@ body {
   min-height: 100vh;
   background-color: $background;
 
+}
+a {
+  text-decoration: inherit;
+}
+
+a:focus,
+a:focus-visible {
+  outline: 1px dashed black;
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+a:hover {
+  color: $darkRed,
 }
 
 h1 {
@@ -51,21 +56,16 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  
+  :hover {
+    border-color: $darkRed;
+  }
 }
-button:hover {
-  border-color: $darkRed;
-}
-button:focus,
-button:focus-visible {
+
+button.Mui-focusVisible {
   outline: 1px dashed black;
 }
 
-a:focus,
-a:focus-visible {
-  outline: 1px dashed black;
-  outline-offset: 3px;
-  border-radius: 1px;
-}
 
 @media (prefers-color-scheme: light) {
   :root {

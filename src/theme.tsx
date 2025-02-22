@@ -13,6 +13,15 @@ export const theme = createTheme({
         disableRipple: true,
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          "&:hover": {
+            color: darkRed,
+          },
+        },
+      },
+    },
     MuiButton: {
       variants: [
         {
@@ -30,7 +39,7 @@ export const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: black,
+      main: darkRed,
     },
     secondary: {
       main: darkRed,
@@ -47,7 +56,7 @@ export const theme = createTheme({
   typography: {
     h1: {
       fontSize: "1.2rem",
-      letterSpacing: "0.2em",
+      letterSpacing: "0.4em",
       color: black,
       fontFamily: "Cormorant Garamond, serif",
       fontWeight: 300,
@@ -71,7 +80,9 @@ export const theme = createTheme({
       },
     },
     body1: {
-      fontSize: "1rem",
+      fontSize: "0.9rem",
+      fontFamily: "Raleway, serif",
+      fontWeight: 500,
     },
   },
 });

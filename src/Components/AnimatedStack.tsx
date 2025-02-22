@@ -11,9 +11,13 @@ export const AnimatedStack = (props: StackProps) => {
 export default AnimatedStack;
 
 const StyledStack = styled(Stack)({
+  ".apply-scroll-animation": {
+    minHeight: "100px",
+  },
+
   "@keyframes enter-animation": {
     "0%": {
-      transform: "translateY(30px)",
+      transform: "translateY(40px)",
       opacity: " 0",
     },
     "100%": {
