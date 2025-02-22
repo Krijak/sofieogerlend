@@ -1,7 +1,6 @@
 import { Stack, Typography, Link, Box } from "@mui/material";
 import TimeLineItem from "../Components/TimeLineItem";
-import SydengateForan from "../../public/SydengateForan.jpg";
-import SydengateBak from "../../public/SydengateBak.jpg";
+import KirkeLandskap from "../../public/KirkeLandskap.jpg";
 import DayAndDate from "../Components/DayAndDate";
 import AnimatedImage from "../Components/AnimatedImage";
 import AnimatedStack from "../Components/AnimatedStack";
@@ -80,29 +79,18 @@ const Loerdag = () => {
         <Stack
           style={{ maxWidth: "800px", minWidth: "200px" }}
           mt={10}
-          flexDirection={"row"}
+          flexDirection={"column"}
           justifyContent={"center"}
           gap={2}
         >
-          <Stack width={"50%"}>
-            <AnimatedImage
-              className="scroll-animation"
-              alt="Erlend og Sofie på teplantasje"
-              src={SydengateForan}
-            />
-          </Stack>
-          <Stack width={{ xs: "30%", sm: "30%", lg: "50%" }}>
-            <AnimatedImage
-              className="scroll-animation"
-              justifyContent={"flex-end"}
-              alt="Erlend og Sofie også på teplantasje"
-              src={SydengateBak}
-            />
-            <Box pt={4} display={{ xs: "none", sm: "none", lg: "flex" }}>
-              <TimeLine />
-            </Box>
-          </Stack>
+          <AnimatedImage alt="Giske kirke" src={KirkeLandskap} />
+          <Typography alignSelf={"flex-end"} sx={{ opacity: "0.5" }}>
+            Foto av Jiri Havran/Arfo forlag
+          </Typography>
         </Stack>
+        <Box pt={4} display={{ xs: "none", sm: "none", lg: "flex" }}>
+          <TimeLine />
+        </Box>
 
         <AnimatedStack
           display={{ xs: "flex", sm: "flex", lg: "none" }}
