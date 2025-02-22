@@ -12,7 +12,7 @@ const Main = () => {
   const randomImageIndex = Math.floor(Math.random() * images.length);
 
   return (
-    <PageWrapper pt={4}>
+    <PageWrapper pt={3}>
       <Box width={{ xs: "80px", sm: "100px" }}>
         <img src={SE} alt="Sofie + Erlend" width={"100%"} />
       </Box>
