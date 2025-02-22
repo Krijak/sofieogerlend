@@ -16,7 +16,11 @@ const Fredag = () => {
           justifyContent={"center"}
           gap={5}
         >
-          <AnimatedImage alt="MS Bruvik" src={MSBruvik} />
+          <AnimatedImage
+            alt="MS Bruvik"
+            src={MSBruvik}
+            className="scroll-animation"
+          />
           <Stack>
             <DayAndDate day="Fredag" date="29 / 08 / 25">
               FJORD CRUISE - MS BRUVIK

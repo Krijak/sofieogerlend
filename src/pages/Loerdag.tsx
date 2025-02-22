@@ -15,7 +15,7 @@ const VielseBryllupsfest = ({
   children,
 }: { time: string; header: string } & PropsWithChildren) => {
   return (
-    <AnimatedStack>
+    <AnimatedStack className="scroll-animation">
       <Typography variant="h2">{time}</Typography>
       <Typography variant="h1">{header}</Typography>
       <Typography mb={10} mt={3}>
@@ -71,12 +71,14 @@ const Loerdag = () => {
           gap={2}
         >
           <AnimatedImage
+            className="scroll-animation"
             justifyContent={"flex-end"}
             width={"50%"}
             alt="Erlend og Sofie på teplantasje"
             src={SydengateForan}
           />
           <AnimatedImage
+            className="scroll-animation"
             justifyContent={"flex-end"}
             width={"30%"}
             alt="Erlend og Sofie også på teplantasje"

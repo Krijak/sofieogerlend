@@ -3,19 +3,19 @@ import SETeTwo from "../../public/SETeTwo.jpg";
 import Azores from "../../public/Azores.jpg";
 import Foss from "../../public/SofieErlend/Foss.png";
 import FullWidthStack from "../Components/FullWidthStack";
+import AnimatedImage from "../Components/AnimatedImage";
 
 const TransportOgOvernatting = () => {
   return (
     <>
       <Stack alignItems={"center"} mt={10}>
-        <Box
+        <AnimatedImage
           style={{ maxWidth: "400px", minWidth: "100px" }}
           paddingLeft={9}
           paddingRight={9}
-          className="image-animation image"
-        >
-          <img alt="Erlend og Sofie på båt" src={Foss} width={"100%"} />
-        </Box>
+          alt="Erlend og Sofie på båt"
+          src={Foss}
+        />
         <Stack maxWidth={"600px"} mt={4} padding={6}>
           <Typography variant="h1">OVERNATTING</Typography>
           <Typography mt={3}>
@@ -32,22 +32,12 @@ const TransportOgOvernatting = () => {
           justifyContent={"center"}
           gap={2}
         >
-          <Box width={"50%"}>
-            <img
-              className="image"
-              alt="Erlend og Sofie på teplantasje "
-              src={SETeTwo}
-              width={"100%"}
-            />
-          </Box>
-          <Box width={"30%"}>
-            <img
-              className="image"
-              alt="Erlend og Sofie også på teplantasje"
-              src={Azores}
-              width={"100%"}
-            />
-          </Box>
+          <AnimatedImage
+            width={"50%"}
+            alt="Erlend og Sofie på teplantasje "
+            src={SETeTwo}
+          />
+          <AnimatedImage width={"30%"} alt="Azorene " src={Azores} />
         </Stack>
         <Stack alignItems={"center"}>
           <Box maxWidth={"500px"} mt={5} padding={6}>

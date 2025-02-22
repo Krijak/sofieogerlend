@@ -10,6 +10,7 @@ import Sydenbaat from "../../public/SofieErlend/Sydenbaat.jpg";
 import SydenbaatTwo from "../../public/SofieErlend/SydenbaatTwo.jpg";
 import Fisk from "../../public/SofieErlend/Fisk.jpg";
 import AnimatedImage from "../Components/AnimatedImage";
+import { useEffect } from "react";
 
 const Main = () => {
   const images: string[] = [
