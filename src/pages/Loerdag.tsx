@@ -146,7 +146,6 @@ const Loerdag = () => {
           flexDirection={{ xs: "column", sm: "column", lg: "row" }}
           mt={7}
           pb={0}
-          gap={3}
         >
           <Vielse />
           <Bryllupsfest />
