@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import "./App.css";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { ThemeProvider } from "@mui/material/styles";
 import Topbar from "./Components/Topbar";
@@ -13,7 +14,7 @@ import Submited from "./pages/Submited";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ThemeProvider theme={theme}>
         <Topbar />
         <Routes>
@@ -28,7 +29,7 @@ function App() {
           <Route path="/rsvp" element={<Rsvp />} />
         </Routes>
       </ThemeProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
