@@ -26,6 +26,7 @@ const Main = () => {
         paddingTop={{ xs: 2, sm: 4 }}
       >
         <img
+          className="image-animation"
           alt="Sofie og Erlend"
           src={images[randomImageIndex]}
           width={"100%"}
