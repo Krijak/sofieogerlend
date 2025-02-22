@@ -6,10 +6,22 @@ import KlatringKyss from "../../public/SofieErlend/KlatringKyss.png";
 import SEBaat from "../../public/SofieErlend/SEBaat.png";
 import FjellBak from "../../public/SofieErlend/FjellBak.png";
 import FjellForan from "../../public/SofieErlend/FjellForan.png";
-import AnimatedImage from "../Components/Image";
+import Sydenbaat from "../../public/SofieErlend/Sydenbaat.jpg";
+import SydenbaatTwo from "../../public/SofieErlend/SydenbaatTwo.jpg";
+import Fisk from "../../public/SofieErlend/Fisk.jpg";
+import AnimatedImage from "../Components/AnimatedImage";
 
 const Main = () => {
-  const images: string[] = [Grein, KlatringKyss, SEBaat, FjellBak, FjellForan];
+  const images: string[] = [
+    Grein,
+    KlatringKyss,
+    SEBaat,
+    FjellBak,
+    FjellForan,
+    Sydenbaat,
+    SydenbaatTwo,
+    Fisk,
+  ];
   const randomImageIndex = Math.floor(Math.random() * images.length);
 
   return (

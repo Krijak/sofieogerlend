@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
-import SETeTwo from "../../public/SETeTwo.png";
-import Azores from "../../public/Azores.png";
+import SETeTwo from "../../public/SETeTwo.jpg";
+import Azores from "../../public/Azores.jpg";
 import Foss from "../../public/SofieErlend/Foss.png";
 import FullWidthStack from "../Components/FullWidthStack";
 

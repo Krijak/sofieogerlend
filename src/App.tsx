@@ -14,22 +14,17 @@ import Submited from "./pages/Submited";
 
 function App() {
   const observer = new IntersectionObserver((entries) => {
-    // Loop over the entries
     entries.forEach((entry) => {
-      // If the element is visible
       if (entry.isIntersecting) {
-        // Add the animation class
-        entry.target.classList.add("image-animation");
-      } else {
-        entry.target.classList.remove("image-animation");
+        entry.target.classList.add("scroll-animation");
       }
     });
   });
 
   useEffect(() => {
-    const viewbox = document.querySelectorAll(".image");
-    viewbox.forEach((image) => {
-      observer.observe(image);
+    const viewbox = document.querySelectorAll(".apply-scroll-animation");
+    viewbox.forEach((element) => {
+      observer.observe(element);
     });
   });
 

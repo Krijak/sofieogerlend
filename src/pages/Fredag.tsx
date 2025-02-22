@@ -2,7 +2,7 @@ import { Box, Link, Stack, styled, Typography } from "@mui/material";
 import MSBruvik from "../../public/MSBruvik.jpg";
 import TimeLineItem from "../Components/TimeLineItem";
 import DayAndDate from "../Components/DayAndDate";
-import AnimatedImage from "../Components/Image";
+import AnimatedImage from "../Components/AnimatedImage";
 import FullWidthStack from "../Components/FullWidthStack";
 
 const Fredag = () => {
@@ -53,9 +53,9 @@ const Fredag = () => {
           >
             <Box>
               <TimeLineItem
-                header={<Typography variant="h2">17 : 00 - 21 : 00</Typography>}
+                header={<Typography variant="h2">17 : 00</Typography>}
               >
-                <Box mt={2}>
+                <Box>
                   <PraktiskInfoP>
                     Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund
                     Cruise Terminal og Ålesund Bussterminal.{" "}
@@ -81,7 +81,7 @@ const Fredag = () => {
         </Stack>
 
         <FullWidthStack>
-          <Box maxWidth={"500px"}>
+          <Box maxWidth={"600px"}>
             <Typography padding={5}>
               MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter,
               bygget i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten

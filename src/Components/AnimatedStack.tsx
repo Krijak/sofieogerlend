@@ -1,21 +1,16 @@
 import { Stack, StackProps, styled } from "@mui/material";
 
-type ImageType = {
-  src: string;
-  alt: string;
-} & StackProps;
-
-export const AnimatedImage = ({ src, alt, ...restProps }: ImageType) => {
+export const AnimatedStack = (props: StackProps) => {
   return (
-    <StyledAnimatedImage {...restProps}>
-      <img className="image" alt={alt} src={src} width={"100%"} />
-    </StyledAnimatedImage>
+    <StyledStack {...props} className="apply-scroll-animation">
+      {props.children}
+    </StyledStack>
   );
 };
 
-export default AnimatedImage;
+export default AnimatedStack;
 
-const StyledAnimatedImage = styled(Stack)({
+const StyledStack = styled(Stack)({
   "@keyframes enter-animation": {
     "0%": {
       transform: "translateY(30px)",
@@ -28,7 +23,7 @@ const StyledAnimatedImage = styled(Stack)({
   },
 
   " @media (prefers-reduced-motion: no-preference)": {
-    ".image-animation": {
+    ".scroll-animation": {
       animation: "enter-animation 1s 0.8",
     },
   },

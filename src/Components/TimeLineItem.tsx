@@ -13,12 +13,12 @@ export const TimeLineItem = ({
 }: TimelineItemType) => {
   return (
     <Stack flexDirection={"row"}>
-      <Stack whiteSpace={"nowrap"} paddingRight={2} marginLeft={-2}>
+      <Box whiteSpace={"nowrap"}>{header}</Box>
+      <Stack whiteSpace={"nowrap"} paddingRight={2} paddingLeft={2}>
         <Dot />
         {!isLast && <Line />}
       </Stack>
       <Box>
-        <Box>{header}</Box>
         <Box>{children}</Box>
       </Box>
     </Stack>
@@ -32,13 +32,15 @@ const Dot = styled("div")(({ theme }) => ({
   width: "6px",
   height: "6px",
   borderRadius: "50%",
-  marginLeft: "-2px",
   marginBottom: "4px",
+  marginLeft: "-3px",
   marginTop: "4px",
+  opacity: "40%",
 }));
 
 const Line = styled("span")({
   borderLeft: "1px solid",
   borderColor: "#56012e33",
   height: "calc(100% - 4px)",
+  opacity: "40%",
 });
