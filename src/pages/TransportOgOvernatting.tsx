@@ -1,4 +1,4 @@
-import { Box, Link, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import SETeTwo from "../../public/SETeTwo.png";
 import Azores from "../../public/Azores.png";
 import Foss from "../../public/SofieErlend/Foss.png";
@@ -19,15 +19,8 @@ const TransportOgOvernatting = () => {
           <Typography mt={3}>
             Det finnes flere overnattingsmuligheter i nærheten av Ålesund og
             Giske. Sjekk ut hotellene i Ålesund Sentrum og hva som finnes for
-            eksempel på AirBnB rundt Giske, Godøya/Alnes og Ålesund. Det er også
-            mulig å telte eller sove i bil ved Øygardshallen.
-          </Typography>
-          <Typography mt={3}>
-            Vi har fått avtale med noen av hotellene i byen: Quality Hotel
-            Waterfront. Booking gjøres via linken under innen 27. Juni.
-            <Link href="https://app.mews.com/distributor/cc78698f-2e14-44d4-8e26-b059008ecc39?mewsAvailabilityBlockId=63aaef69-15c2-4362-a37f-b27b0139f66c&mewsStart=2025-08-29&mewsEnd=2025-08-31">
-              Booking Quality Hotel Waterfront
-            </Link>
+            eksempel på AirBnB rundt Giske, Godøya og Ålesund. Det er også mulig
+            å telte eller sove i bil ved Øygardshallen.
           </Typography>
         </Stack>
         <Stack
@@ -82,10 +75,10 @@ const TransportOgOvernatting = () => {
                 <b>Buss til og fra bryllupet</b>
               </Typography>
               <Typography>
-                Vi setter opp en buss som kjører fra Ålesund sentrum til Giske
+                Vi har satt opp en buss som kjører fra Ålesund sentrum til Giske
                 Kirke før seremonien, og som kjører gjester tilbake på slutten
                 av kvelden. Tidspunkter og oppmøtested vil bli oppdatert nærmere
-                bryllupet. Svar under RSVP om du ønsker transport.
+                bryllupet.
               </Typography>
             </Box>
             <Box maxWidth={"300px"}>
