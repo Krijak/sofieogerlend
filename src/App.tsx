@@ -1,4 +1,3 @@
-import "./App.css";
 import { HashRouter } from "react-router-dom";
 import { Route, Routes, useLocation } from "react-router";
 import { ThemeProvider } from "@mui/material/styles";
