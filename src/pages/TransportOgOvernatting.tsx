@@ -27,7 +27,7 @@ const TransportOgOvernatting = () => {
         </Typography>
         <Typography mt={3}>
           Vi har fått avtale med noen av hotellene i byen: Quality Hotel
-          Waterfront. Booking gjøres via linken under innen 27. Juni.
+          Waterfront. Booking gjøres via linken under innen 27. juni.{" "}
           <Link href="https://app.mews.com/distributor/cc78698f-2e14-44d4-8e26-b059008ecc39?mewsAvailabilityBlockId=63aaef69-15c2-4362-a37f-b27b0139f66c&mewsStart=2025-08-29&mewsEnd=2025-08-31">
             Booking Quality Hotel Waterfront
           </Link>
