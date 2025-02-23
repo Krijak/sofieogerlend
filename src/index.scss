@@ -18,23 +18,27 @@ $white: #fff;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: $darkRed;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background-color: $background;
 
+}
+a {
+  text-decoration: inherit;
+}
+
+a:focus,
+a:focus-visible {
+  outline: 1px dashed black;
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+a:hover {
+  color: $darkRed,
 }
 
 h1 {
@@ -52,21 +56,16 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  
+  :hover {
+    border-color: $darkRed;
+  }
 }
-button:hover {
-  border-color: $darkRed;
-}
-button:focus,
-button:focus-visible {
+
+button.Mui-focusVisible {
   outline: 1px dashed black;
 }
 
-a:focus,
-a:focus-visible {
-  outline: 1px dashed black;
-  outline-offset: 3px;
-  border-radius: 1px;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -101,7 +100,7 @@ a:focus-visible {
   
   form.ff-form {
   padding: 0px 30px !important;
-  background-color: $background !important;
+  background-color: transparent !important;
 
 
   textarea.ff-widget-control.rest-form-control {
@@ -147,3 +146,4 @@ a:focus-visible {
   }
 
 } 
+

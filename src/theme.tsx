@@ -1,10 +1,25 @@
 import { createTheme } from "@mui/material/styles";
 
+const darkRed = "#510629";
+const defaultBackground = "#f9f6f0"; //"#e5dee1";
+const paperBackground = "rgba(224, 220, 217, 0.32)";
+const success = "#547b57";
+const black = "#000";
+
 export const theme = createTheme({
   components: {
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          "&:hover": {
+            color: darkRed,
+          },
+        },
       },
     },
     MuiButton: {
@@ -14,7 +29,7 @@ export const theme = createTheme({
           style: {
             color: "black",
             ":hover": {
-              color: "#56012e",
+              color: darkRed,
             },
           },
         },
@@ -24,26 +39,28 @@ export const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#56012e",
+      main: darkRed,
     },
     secondary: {
-      main: "#f50057",
+      main: darkRed,
     },
     background: {
-      default: "#e5dee1",
-      paper: "#5b2a45",
+      default: defaultBackground,
+      paper: paperBackground,
     },
     success: {
-      main: "#547b57",
+      main: success,
     },
-    divider: "#510629",
+    divider: darkRed,
   },
   typography: {
     h1: {
-      fontSize: "1.1rem",
-      fontWeight: 100,
-      letterSpacing: "0.09em",
-      color: "#510629",
+      fontSize: "1.2rem",
+      letterSpacing: "0.4em",
+      color: black,
+      fontFamily: "Cormorant Garamond, serif",
+      fontWeight: 300,
+      fontStyle: "normal",
       xs: {
         fontSize: "1rem",
       },
@@ -51,10 +68,21 @@ export const theme = createTheme({
     h2: {
       fontSize: "0.8rem",
       fontWeight: 600,
-      color: "#510629",
+      color: black,
+    },
+    h3: {
+      fontSize: "1.1rem",
+      fontWeight: 100,
+      letterSpacing: "0.09em",
+      color: black,
+      xs: {
+        fontSize: "1rem",
+      },
     },
     body1: {
-      fontSize: "1rem",
+      fontSize: "0.9rem",
+      fontFamily: "Raleway, serif",
+      fontWeight: 500,
     },
   },
 });

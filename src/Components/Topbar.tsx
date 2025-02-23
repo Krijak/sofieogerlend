@@ -10,8 +10,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Toolbar from "@mui/material/Toolbar";
 import { Button, Stack, styled, Typography } from "@mui/material";
-import { NavLink } from "react-router-dom";
-import SE from "../../public/SE.png";
+import { NavLink, useLocation } from "react-router-dom";
+import SofieErlend from "../../public/SofieErlend.png";
+import SofieOgErlend from "../../public/SofieOgErlend.svg";
 
 type NavItem = {
   title: string;
@@ -20,7 +21,7 @@ type NavItem = {
 
 const MenuItem = ({ title, href }: NavItem) => {
   return (
-    <StyledNavLinkWrapper display={"inline"} variant="button" title={title}>
+    <StyledNavLinkWrapper display={"inline"} title={title}>
       <NavLink
         key={href}
         to={href}
@@ -35,7 +36,8 @@ const MenuItem = ({ title, href }: NavItem) => {
 
 const Topbar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const drawerWidth = 302;
+  const drawerWidth = 350;
+  const isOnMain = useLocation().pathname == "/";
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -46,6 +48,7 @@ const Topbar = () => {
     { title: "Fredag", href: "fredag" },
     { title: "Lørdag", href: "lørdag" },
     { title: "Transport og overnatting", href: "transportogovernatting" },
+    { title: "Informasjon", href: "informasjon" },
     { title: "Rsvp", href: "rsvp" },
     { title: "Ønskeliste", href: "https://onsk.no/lister/km8-4le" },
   ];
@@ -64,17 +67,30 @@ const Topbar = () => {
     >
       <Box>
         <Box mb={10}>
-          <img src={SE} width={"70px"} />
+          <Button onClick={() => handleDrawerToggle} aria-label="Lukk sidemeny">
+            <img src={SofieErlend} alt="Lukk sidemeny" width={"150px"} />
+          </Button>
         </Box>
         <List>
           {navItems.map((item) => (
-            <ListItem key={item.href} disablePadding sx={{ marginBottom: 3 }}>
+            <ListItem
+              key={item.href}
+              disablePadding
+              sx={{
+                marginBottom: 1,
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <MenuItem {...item} />
             </ListItem>
           ))}
         </List>
       </Box>
-      <Button onClick={() => handleDrawerToggle}>Lukk</Button>
+      <Typography mb={2} fontSize={"0.8rem"} sx={{ opacity: "0.5" }}>
+        Til Sofie & Erlend <br />
+        Fra Kristina ♡ med kjærlighet
+      </Typography>
     </Stack>
   );
 
@@ -86,20 +102,27 @@ const Topbar = () => {
         sx={{
           background: (theme) => theme.palette.background.default,
           boxShadow: "none",
-          ".MuiToolbar-root": { justifyContent: "flex-end" },
+          ".MuiToolbar-root": {
+            justifyContent: isOnMain ? "flex-end" : "space-between",
+          },
         }}
       >
         <Toolbar>
+          {!isOnMain && (
+            <Box ml={2}>
+              <img src={SofieOgErlend} width={"200px"} />
+            </Box>
+          )}
           <IconButton
             aria-label="åpne meny"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { lg: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Stack
-            sx={{ display: { xs: "none", sm: "flex" } }}
+            sx={{ display: { xs: "none", sm: "none", md: "none", lg: "flex" } }}
             flexDirection={"row"}
             gap={3}
           >
@@ -118,7 +141,7 @@ const Topbar = () => {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "flex", sm: "none" },
+            display: { xs: "flex", sm: "flex", md: "flex", lg: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -139,6 +162,10 @@ const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
   "& >a": {
     color: "black",
     display: "flex",
+    padding: "6px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    borderRadius: "20px",
     ":hover": {
       color: theme.palette.primary.main,
     },
@@ -150,6 +177,8 @@ const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
   },
   "& > .active": {
     fontWeight: "bold",
+    // border: "1px solid",
+    // borderColor: theme.palette.primary.main,
     color: theme.palette.primary.main,
   },
   "::after": {

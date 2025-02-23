@@ -1,8 +1,8 @@
 import { PropsWithChildren, ReactNode } from "react";
-import { Box, Stack, styled } from "@mui/material";
+import { Box, Stack, StackProps, styled } from "@mui/material";
 
 type TimelineItemType = {
-  header: ReactNode;
+  header?: ReactNode;
   isLast?: boolean;
 } & PropsWithChildren;
 
@@ -10,15 +10,18 @@ export const TimeLineItem = ({
   header,
   isLast,
   children,
-}: TimelineItemType) => {
+  ...restProps
+}: TimelineItemType & StackProps) => {
   return (
-    <Stack flexDirection={"row"}>
-      <Stack whiteSpace={"nowrap"} paddingRight={2} marginLeft={-2}>
-        <Dot />
+    <Stack flexDirection={"row"} {...restProps}>
+      {header && <Box whiteSpace={"nowrap"}>{header}</Box>}
+      <Stack whiteSpace={"nowrap"} marginRight={2} marginLeft={2}>
+        <Box mb="4px" mt="4px">
+          <Dot />
+        </Box>
         {!isLast && <Line />}
       </Stack>
       <Box>
-        <Box>{header}</Box>
         <Box>{children}</Box>
       </Box>
     </Stack>
@@ -32,13 +35,13 @@ const Dot = styled("div")(({ theme }) => ({
   width: "6px",
   height: "6px",
   borderRadius: "50%",
-  marginLeft: "-2px",
-  marginBottom: "4px",
-  marginTop: "4px",
+  marginLeft: "-3px",
+  opacity: "40%",
 }));
 
 const Line = styled("span")({
   borderLeft: "1px solid",
   borderColor: "#56012e33",
   height: "calc(100% - 4px)",
+  opacity: "40%",
 });
