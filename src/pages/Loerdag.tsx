@@ -92,7 +92,12 @@ const Loerdag = () => {
           gap={2}
         >
           <AnimatedImage alt="Giske kirke" src={KirkeLandskap} />
-          <Typography alignSelf={"flex-end"} sx={{ opacity: "0.5" }}>
+          <Typography
+            alignSelf={"flex-end"}
+            sx={{ opacity: "0.5" }}
+            pl={2}
+            pr={2}
+          >
             Foto av{" "}
             <Link rel="license" href="https://www.havran.no/">
               Jiri Havran
