@@ -67,7 +67,9 @@ const Topbar = () => {
     >
       <Box>
         <Box mb={10}>
-          <img src={SofieErlend} width={"150px"} />
+          <Button onClick={() => handleDrawerToggle} aria-label="Lukk sidemeny">
+            <img src={SofieErlend} alt="Lukk sidemeny" width={"150px"} />
+          </Button>
         </Box>
         <List>
           {navItems.map((item) => (
@@ -85,9 +87,10 @@ const Topbar = () => {
           ))}
         </List>
       </Box>
-      <Button sx={{ marginBottom: 3 }} onClick={() => handleDrawerToggle}>
-        Lukk
-      </Button>
+      <Typography mb={2} fontSize={"0.8rem"} sx={{ opacity: "0.5" }}>
+        Til Sofie & Erlend <br />
+        Fra Kristina ♡ med kjærlighet
+      </Typography>
     </Stack>
   );
 
