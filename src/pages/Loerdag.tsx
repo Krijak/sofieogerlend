@@ -1,4 +1,4 @@
-import { Stack, Typography, Link, Box } from "@mui/material";
+import { Stack, Typography, Link, Box, Button } from "@mui/material";
 import TimeLineItem from "../Components/TimeLineItem";
 import SydengateForan from "../../public/SydengateForan.jpg";
 import SydengateBak from "../../public/SydengateBak.jpg";
@@ -13,17 +13,25 @@ const TimeLine = () => {
       <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
         <Box mb={4}>
           <Typography variant="h2">VIELSE</Typography>
-          <Link mb={4} href="https://maps.app.goo.gl/TfHGsWy8UKy9Mvbm8">
-            Giske Kirke, Giskevegen 121, 6052 Giske
-          </Link>
+          <Typography>
+            Giske Kirke
+            <br />
+            <Link mb={4} href="https://maps.app.goo.gl/TfHGsWy8UKy9Mvbm8">
+              Giskevegen 121, 6052 Giske
+            </Link>
+          </Typography>
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">14 : 30</Typography>}>
         <Box pb={4}>
           <Typography variant="h2">BRYLLUPSFEST</Typography>
-          <Link href="https://maps.app.goo.gl/yoWSAJcg2W5mFSXd8">
-            Øygardshallen, Sjøvegen 77, 6052 Giske
-          </Link>
+          <Typography>
+            Øygardshallen
+            <br />
+            <Link href="https://maps.app.goo.gl/yoWSAJcg2W5mFSXd8">
+              Sjøvegen 77, 6052 Giske
+            </Link>
+          </Typography>
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>

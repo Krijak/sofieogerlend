@@ -53,7 +53,7 @@ const Fredag = () => {
           <TimeLineItem>
             <Box>
               <Typography variant="h2" mb={2}>
-                17 : 00
+                17 : 00 - 21 : 00
               </Typography>
               <PraktiskInfoP>
                 Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund

@@ -10,7 +10,8 @@ const TransportOgOvernatting = () => {
   return (
     <PageWrapper>
       <AnimatedImage
-        style={{ maxWidth: "500px", minWidth: "100px" }}
+        style={{ minWidth: "100px" }}
+        maxWidth={{ xs: "400px", sm: "400px", lg: "500px" }}
         paddingLeft={9}
         paddingRight={9}
         alt="Erlend og Sofie på båt"
