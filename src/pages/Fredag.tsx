@@ -70,8 +70,8 @@ const Fredag = () => {
                 <b>Varighet:</b> Turen varer ca 4 timer.
               </PraktiskInfoP>
               <Typography>
-                <b>Bekledning:</b> Casual, ta gjerne med varme klær til å stå
-                ute i.
+                <b>Bekledning:</b> Gjerne pent, men kle dere etter været med
+                mulighet for å være ute på båten.
               </Typography>
             </Box>
           </TimeLineItem>
