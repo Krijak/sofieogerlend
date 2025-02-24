@@ -24,28 +24,27 @@ const Informasjon = () => {
         />
       </Stack>
       <Stack maxWidth={"600px"} mt={4} padding={6}>
-        <Typography variant="h1">INFORMASJON</Typography>
-          <Typography variant="h2" mt={3}>SPØRSMÅL?</Typography>
-          <Typography mt={1}>
-            Ta kontakt med{" "}
-            <Link href="mailto:evastveit@gmail.com">evastveit@gmail.com</Link>
-          </Typography>
-          <Typography variant="h2" mt={4}>
-            TALER OG TOASTMASTER
-          </Typography>
-          <Typography mt={1}>Informasjon kommer</Typography>
-          {/* <Typography variant="h2" mt={4}> */}
-            {/* DRESSCODE
-          </Typography>
-          <Typography mt={1}>Noe helt sykt swag, takk</Typography> */}
-          <Typography variant="h2" mt={4}>
-            KAN JEG TA MED BARN?
-          </Typography>
-          <Typography mt={1}>
-            Vi ønsker å feire dagen vår i voksent selskap, og håper barna kan være
-            igjen hos en barnevakt akkurat denne dagen.
-          </Typography>
-        </Stack>
+        <Typography variant="h2">SPØRSMÅL?</Typography>
+        <Typography mt={1}>
+          Ta kontakt med{" "}
+          <Link href="mailto:evastveit@gmail.com">evastveit@gmail.com</Link>
+        </Typography>
+        <Typography variant="h2" mt={4}>
+          TALER OG TOASTMASTER
+        </Typography>
+        <Typography mt={1}>Informasjon kommer</Typography>
+        <Typography variant="h2" mt={4}>
+          DRESSCODE
+        </Typography>
+        <Typography mt={1}>Noe helt sykt swag, takk</Typography>
+        <Typography variant="h2" mt={4}>
+          KAN JEG TA MED BARN?
+        </Typography>
+        <Typography mt={1}>
+          Vi ønsker å feire dagen vår i voksent selskap, og håper barna kan være
+          igjen hos en barnevakt akkurat denne dagen.
+        </Typography>
+      </Stack>
     </PageWrapper>
   );
 };
