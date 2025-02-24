@@ -1,10 +1,10 @@
-import { Stack, Typography, Link, Box } from "@mui/material";
-import TimeLineItem from "../Components/TimeLineItem";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import KirkeLandskap from "../../public/Kirkelandskap.jpg";
-import DayAndDate from "../Components/DayAndDate";
 import AnimatedImage from "../Components/AnimatedImage";
 import AnimatedStack from "../Components/AnimatedStack";
+import DayAndDate from "../Components/DayAndDate";
 import PageWrapper from "../Components/PageWrapper";
+import TimeLineItem from "../Components/TimeLineItem";
 
 const TimeLine = () => {
   return (
