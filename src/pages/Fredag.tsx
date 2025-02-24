@@ -92,10 +92,7 @@ const Fredag = () => {
 
       <FullWidthStack mt={{ xs: 0, sm: 0, lg: 10 }}>
         <Box maxWidth={"600px"}>
-        <Typography mb={1}>
-              <b>MS Bruvik</b>
-            </Typography>
-          <Typography>
+          <Typography padding={5}>
             MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter, bygget
             i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass
             til 153 passasjerer og tilbyr nostalgiske fjordopplevelser i vakker

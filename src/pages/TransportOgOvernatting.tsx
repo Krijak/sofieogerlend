@@ -9,14 +9,14 @@ import PageWrapper from "../Components/PageWrapper";
 const TransportOgOvernatting = () => {
   return (
     <PageWrapper>
-      {/* <AnimatedImage
+      <AnimatedImage
         style={{ minWidth: "100px" }}
         maxWidth={{ xs: "400px", sm: "400px", lg: "500px" }}
         paddingLeft={9}
         paddingRight={9}
         alt="Erlend og Sofie på båt"
         src={Foss}
-      /> */}
+      />
       <Stack maxWidth={"600px"} mt={4} padding={6}>
         <Typography variant="h1">OVERNATTING</Typography>
         <Typography mt={3}>
