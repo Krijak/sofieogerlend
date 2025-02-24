@@ -1,10 +1,10 @@
 import { Box, Link, Stack, styled, Typography } from "@mui/material";
 import MSBruvik from "../../public/MSBruvik.jpg";
-import TimeLineItem from "../Components/TimeLineItem";
-import DayAndDate from "../Components/DayAndDate";
 import AnimatedImage from "../Components/AnimatedImage";
+import DayAndDate from "../Components/DayAndDate";
 import FullWidthStack from "../Components/FullWidthStack";
 import PageWrapper from "../Components/PageWrapper";
+import TimeLineItem from "../Components/TimeLineItem";
 
 const Fredag = () => {
   return (
@@ -91,10 +91,13 @@ const Fredag = () => {
       </Stack>
 
       <FullWidthStack mt={{ xs: 0, sm: 0, lg: 10 }}>
-        <Box maxWidth={"600px"}>
-          <Typography padding={5}>
-            MS «Bruvik» er en av Norges best bevarte fjordpassasjerbåter, bygget
-            i 1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass
+        <Box maxWidth={"600px"} padding={5}>
+          <Typography variant="h2" textTransform={"uppercase"} mb={2}>
+            MS Bruvik
+          </Typography>
+          <Typography>
+            MS Bruvik er en av Norges best bevarte fjordpassasjerbåter, bygget i
+            1949 ved Glommen Mekaniske Verksted i Fredrikstad. Båten har plass
             til 153 passasjerer og tilbyr nostalgiske fjordopplevelser i vakker
             sunnmørsk natur. Mannskapet deler gjerne sin lokalkunnskap og båtens
             historie med passasjerene.{" "}
