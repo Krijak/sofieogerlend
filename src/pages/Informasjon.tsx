@@ -36,7 +36,10 @@ const Informasjon = () => {
         <Typography variant="h2" mt={4}>
           DRESSCODE
         </Typography>
-        <Typography mt={1}>Noe helt sykt swag, takk</Typography>
+        <Typography mt={1}>
+          Mørk dress. Ta gjerne med klær for å nyte solnedgangen ved stranden
+          senere på kvelden.
+        </Typography>
         <Typography variant="h2" mt={4}>
           KAN JEG TA MED BARN?
         </Typography>

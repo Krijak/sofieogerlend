@@ -1,15 +1,15 @@
-import { Stack, Typography, Link, Box } from "@mui/material";
-import TimeLineItem from "../Components/TimeLineItem";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import KirkeLandskap from "../../public/Kirkelandskap.jpg";
-import DayAndDate from "../Components/DayAndDate";
 import AnimatedImage from "../Components/AnimatedImage";
 import AnimatedStack from "../Components/AnimatedStack";
+import DayAndDate from "../Components/DayAndDate";
 import PageWrapper from "../Components/PageWrapper";
+import TimeLineItem from "../Components/TimeLineItem";
 
 const TimeLine = () => {
   return (
     <Box padding={6} pt={3}>
-      <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
+      <TimeLineItem header={<Typography variant="h2">13 : 00</Typography>}>
         <Box mb={4}>
           <Typography variant="h2">VIELSE</Typography>
           <Typography>
