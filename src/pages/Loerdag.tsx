@@ -9,7 +9,7 @@ import PageWrapper from "../Components/PageWrapper";
 const TimeLine = () => {
   return (
     <Box padding={6} pt={3}>
-      <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
+      <TimeLineItem header={<Typography variant="h2">13 : 00</Typography>}>
         <Box mb={4}>
           <Typography variant="h2">VIELSE</Typography>
           <Typography>
