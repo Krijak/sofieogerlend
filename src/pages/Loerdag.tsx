@@ -1,7 +1,6 @@
 import { Box, Link, Stack, Typography } from "@mui/material";
 import KirkeLandskap from "../../public/Kirkelandskap.jpg";
 import AnimatedImage from "../Components/AnimatedImage";
-import AnimatedStack from "../Components/AnimatedStack";
 import DayAndDate from "../Components/DayAndDate";
 import PageWrapper from "../Components/PageWrapper";
 import TimeLineItem from "../Components/TimeLineItem";
@@ -10,7 +9,7 @@ const TimeLine = () => {
   return (
     <Box padding={6} pt={3}>
       <TimeLineItem header={<Typography variant="h2">13 : 00</Typography>}>
-        <Box mb={4}>
+        <Box mb={4} className={"apply-scroll-animation only-once"}>
           <Typography variant="h2">VIELSE</Typography>
           <Typography>
             Giske Kirke
@@ -22,7 +21,7 @@ const TimeLine = () => {
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">14 : 30</Typography>}>
-        <Box pb={4}>
+        <Box pb={4} className={"apply-scroll-animation only-once"}>
           <Typography variant="h2">BRYLLUPSFEST</Typography>
           <Typography>
             Øygardshallen
@@ -34,25 +33,53 @@ const TimeLine = () => {
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
-        <Typography marginBottom={2}>Leker</Typography>
+        <Typography
+          marginBottom={2}
+          className={"apply-scroll-animation only-once"}
+        >
+          Leker
+        </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">16 : 00</Typography>}>
-        <Typography marginBottom={2}>Bordsetting</Typography>
+        <Typography
+          marginBottom={2}
+          className={"apply-scroll-animation only-once"}
+        >
+          Bordsetting
+        </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">20 : 00</Typography>}>
-        <Typography marginBottom={2}>Kaffe og kaker</Typography>
+        <Typography
+          marginBottom={2}
+          className={"apply-scroll-animation only-once"}
+        >
+          Kaffe og kaker
+        </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">21 : 00</Typography>}>
-        <Typography marginBottom={2}>Solnedgang ute</Typography>
+        <Typography
+          marginBottom={2}
+          className={"apply-scroll-animation only-once"}
+        >
+          Solnedgang ute
+        </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">21 : 30</Typography>}>
-        <Typography marginBottom={2}>Fest og moro</Typography>
+        <Typography
+          marginBottom={2}
+          className={"apply-scroll-animation only-once"}
+        >
+          Fest og moro
+        </Typography>
       </TimeLineItem>
       <TimeLineItem
         isLast
         header={<Typography variant="h2">02 : 00</Typography>}
       >
-        <Typography marginBottom={2}>
+        <Typography
+          marginBottom={2}
+          className={"apply-scroll-animation only-once"}
+        >
           Busstransport til Ålesund sentrum
         </Typography>
       </TimeLineItem>
@@ -109,7 +136,7 @@ const Loerdag = () => {
           <TimeLine />
         </Box>
 
-        <AnimatedStack
+        <Stack
           display={{ xs: "flex", sm: "flex", lg: "none" }}
           maxWidth={"800px"}
           width={"100%"}
@@ -121,7 +148,7 @@ const Loerdag = () => {
           pb={0}
         >
           <TimeLine />
-        </AnimatedStack>
+        </Stack>
       </Stack>
     </PageWrapper>
   );

@@ -144,3 +144,47 @@ button.Mui-focusVisible {
 
 } 
 
+
+@keyframes enter-animation {
+  0% {
+    transform: translateY(100px);
+    opacity:  0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-animation{
+    animation: enter-animation 0.8s 1;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader {
+  animation: fadeIn 0.1s ease-in-out forwards;
+}
+
+.loader-fade-out {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
