@@ -83,7 +83,7 @@ function App() {
       <Wrapper>
         <ThemeProvider theme={theme}>
           <Topbar />
-          <Loading isLoading={showLoading} />
+          {!isLoaded && <Loading isLoading={showLoading} />}
           {isLoaded && (
             <Routes>
               <Route
