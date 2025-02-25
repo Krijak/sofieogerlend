@@ -26,9 +26,10 @@ const MenuItem = ({ title, href }: NavItem) => {
         key={href}
         to={href}
         className={({ isActive }) => (isActive ? "active" : "")}
-        target={title == "Ønskeliste" ? "_blank" : "_self"}
+        target={title == "Ønskeliste" || title == "Rsvp" ? "_blank" : "_self"}
       >
-        {title} {title == "Ønskeliste" && <OpenInNewIcon />}
+        {title}{" "}
+        {(title == "Ønskeliste" || title == "Rsvp") && <OpenInNewIcon />}
       </NavLink>
     </StyledNavLinkWrapper>
   );
@@ -50,7 +51,10 @@ const Topbar = () => {
     { title: "Lørdag", href: "lørdag" },
     { title: "Transport og overnatting", href: "transportogovernatting" },
     { title: "Informasjon", href: "informasjon" },
-    { title: "Rsvp", href: "rsvp" },
+    {
+      title: "Rsvp",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLSdBsYysWmlnovduxWR2RICMEsIk0uOwYEiuFoqTrgld8U3RZw/viewform?usp=sharing",
+    },
     { title: "Ønskeliste", href: "https://onsk.no/lister/km8-4le" },
   ];
 
