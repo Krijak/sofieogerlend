@@ -9,7 +9,7 @@ const TimeLine = () => {
   return (
     <Box padding={6} pt={3}>
       <TimeLineItem header={<Typography variant="h2">13 : 00</Typography>}>
-        <Box mb={4} className={"apply-scroll-animation only-once"}>
+        <Box mb={4} className={"apply-scroll-animation"}>
           <Typography variant="h2">VIELSE</Typography>
           <Typography>
             Giske Kirke
@@ -21,7 +21,7 @@ const TimeLine = () => {
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">14 : 30</Typography>}>
-        <Box pb={4} className={"apply-scroll-animation only-once"}>
+        <Box pb={4} className={"apply-scroll-animation"}>
           <Typography variant="h2">BRYLLUPSFEST</Typography>
           <Typography>
             Øygardshallen
@@ -33,42 +33,27 @@ const TimeLine = () => {
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
-        <Typography
-          marginBottom={2}
-          className={"apply-scroll-animation only-once"}
-        >
+        <Typography marginBottom={2} className={"apply-scroll-animation"}>
           Leker
         </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">16 : 00</Typography>}>
-        <Typography
-          marginBottom={2}
-          className={"apply-scroll-animation only-once"}
-        >
+        <Typography marginBottom={2} className={"apply-scroll-animation"}>
           Bordsetting
         </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">20 : 00</Typography>}>
-        <Typography
-          marginBottom={2}
-          className={"apply-scroll-animation only-once"}
-        >
+        <Typography marginBottom={2} className={"apply-scroll-animation"}>
           Kaffe og kaker
         </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">21 : 00</Typography>}>
-        <Typography
-          marginBottom={2}
-          className={"apply-scroll-animation only-once"}
-        >
+        <Typography marginBottom={2} className={"apply-scroll-animation"}>
           Solnedgang ute
         </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">21 : 30</Typography>}>
-        <Typography
-          marginBottom={2}
-          className={"apply-scroll-animation only-once"}
-        >
+        <Typography marginBottom={2} className={"apply-scroll-animation"}>
           Fest og moro
         </Typography>
       </TimeLineItem>
@@ -76,10 +61,7 @@ const TimeLine = () => {
         isLast
         header={<Typography variant="h2">02 : 00</Typography>}
       >
-        <Typography
-          marginBottom={2}
-          className={"apply-scroll-animation only-once"}
-        >
+        <Typography marginBottom={2} className={"apply-scroll-animation"}>
           Busstransport til Ålesund sentrum
         </Typography>
       </TimeLineItem>
