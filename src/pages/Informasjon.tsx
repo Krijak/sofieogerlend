@@ -1,5 +1,8 @@
 import { Link, Stack, Typography } from "@mui/material";
-import Kajakk from "../../public/Kajakk.jpg";
+import Motorsykkel1 from "../../public/motorsykkel_01.gif";
+import Motorsykkel2 from "../../public/motorsykkel_02.gif";
+import Motorsykkel3 from "../../public/motorsykkel_03.gif";
+
 import AnimatedImage from "../Components/AnimatedImage";
 import PageWrapper from "../Components/PageWrapper";
 
@@ -9,18 +12,18 @@ const Informasjon = () => {
       <Stack flexDirection={"row"} gap={1} marginLeft={8} marginRight={8}>
         <AnimatedImage
           style={{ maxWidth: "400px", minWidth: "100px" }}
-          alt="Erlend og Sofie på båt"
-          src={Kajakk}
+          alt="Erlend og Sofie i Indonesia"
+          src={Motorsykkel1}
         />
         <AnimatedImage
           style={{ maxWidth: "400px", minWidth: "100px" }}
-          alt="Erlend og Sofie på båt"
-          src={Kajakk}
+          alt="Erlend og Sofie i Indonesia"
+          src={Motorsykkel2}
         />
         <AnimatedImage
           style={{ maxWidth: "400px", minWidth: "100px" }}
-          alt="Erlend og Sofie på båt"
-          src={Kajakk}
+          alt="Erlend og Sofie i Indonesia"
+          src={Motorsykkel3}
         />
       </Stack>
       <Stack maxWidth={"600px"} mt={4} padding={6}>

@@ -20,8 +20,6 @@ const Wrapper = ({ children }: PropsWithChildren) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("scroll-animation");
-      } else {
-        entry.target.classList.remove("scroll-animation");
       }
     });
   });
@@ -56,7 +54,7 @@ function App() {
   useEffect(() => {
     const images: string[] = [
       ...Object.values(
-        import.meta.glob("/public/*.{png,jpg,jpeg}", { eager: true })
+        import.meta.glob("/public/*.{png,jpg,jpeg,gif}", { eager: true })
       ).map((module) => (module as any).default),
       ...Object.values(
         import.meta.glob("/public/SofieErlend/*.{png,jpg,jpeg}", {
@@ -67,9 +65,11 @@ function App() {
 
     preloadImages(images)
       .then(() => {
-        setShowLoading(false);
         setTimeout(() => {
-          setIsLoaded(true);
+          setShowLoading(false);
+          setTimeout(() => {
+            setIsLoaded(true);
+          }, 500);
         }, 500);
       })
       .catch(() => {
@@ -82,8 +82,8 @@ function App() {
     <HashRouter basename={import.meta.env.BASE_URL}>
       <Wrapper>
         <ThemeProvider theme={theme}>
-          <Topbar />
           {!isLoaded && <Loading isLoading={showLoading} />}
+          <Topbar />
           {isLoaded && (
             <Routes>
               <Route

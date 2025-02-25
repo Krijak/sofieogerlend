@@ -1,7 +1,7 @@
 import { Box, Link, Stack, Typography } from "@mui/material";
-import Azores from "../../public/Azores.jpg";
-import Foss from "../../public/Foss.jpg";
-import SETeTwo from "../../public/SETeTwo.jpg";
+import Gress from "../../public/Gress.jpg";
+import SofieErlendTeSelfie from "../../public/SofieErlendTeSelfie.jpg";
+import Telt from "../../public/Telt.jpg";
 import AnimatedImage from "../Components/AnimatedImage";
 import FullWidthStack from "../Components/FullWidthStack";
 import PageWrapper from "../Components/PageWrapper";
@@ -15,7 +15,7 @@ const TransportOgOvernatting = () => {
         paddingLeft={9}
         paddingRight={9}
         alt="Erlend og Sofie på båt"
-        src={Foss}
+        src={SofieErlendTeSelfie}
       />
       <Stack maxWidth={"600px"} mt={4} padding={6}>
         <Typography variant="h1">OVERNATTING</Typography>
@@ -43,9 +43,10 @@ const TransportOgOvernatting = () => {
         <AnimatedImage
           width={"50%"}
           alt="Erlend og Sofie på teplantasje "
-          src={SETeTwo}
+          style={{ transform: "rotateY(180deg)" }}
+          src={Gress}
         />
-        <AnimatedImage width={"30%"} alt="Azorene " src={Azores} />
+        <AnimatedImage width={"30%"} alt="Azorene " src={Telt} />
       </Stack>
       <Stack alignItems={"center"}>
         <Box maxWidth={"500px"} mt={5} padding={6}>
