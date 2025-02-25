@@ -19,13 +19,20 @@ type NavItem = {
   href: string;
 };
 
-const MenuItem = ({ title, href }: NavItem) => {
+const MenuItem = ({
+  title,
+  href,
+  locationPath,
+}: NavItem & { locationPath: string }) => {
+  const isMainAndActive = href == "/" && locationPath == "/main";
   return (
     <StyledNavLinkWrapper display={"inline"} title={title}>
       <NavLink
         key={href}
         to={href}
-        className={({ isActive }) => (isActive ? "active" : "")}
+        className={({ isActive }) =>
+          isActive || isMainAndActive ? "active" : ""
+        }
         target={title == "Ønskeliste" ? "_blank" : "_self"}
       >
         {title} {title == "Ønskeliste" && <OpenInNewIcon />}
@@ -83,7 +90,7 @@ const Topbar = () => {
                 justifyContent: "center",
               }}
             >
-              <MenuItem {...item} />
+              <MenuItem {...item} locationPath={location.pathname} />
             </ListItem>
           ))}
         </List>
@@ -128,7 +135,11 @@ const Topbar = () => {
             gap={3}
           >
             {navItems.map((item) => (
-              <MenuItem {...item} key={item.href} />
+              <MenuItem
+                {...item}
+                key={item.href}
+                locationPath={location.pathname}
+              />
             ))}
           </Stack>
         </Toolbar>
@@ -160,13 +171,22 @@ const Topbar = () => {
 export default Topbar;
 
 const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
+  width: "100%",
+  "&>li": {
+    display: "flex",
+    justifyContent: "center",
+  },
   "& >a": {
     color: "black",
-    display: "flex",
     padding: "6px",
     paddingLeft: "10px",
     paddingRight: "10px",
     borderRadius: "20px",
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    textAlign: "center",
     ":hover": {
       color: theme.palette.primary.main,
     },

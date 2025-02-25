@@ -9,8 +9,6 @@ import Informasjon from "./pages/Informasjon";
 import Loading from "./pages/Loading";
 import Loerdag from "./pages/Loerdag";
 import Main from "./pages/Main";
-import Rsvp from "./pages/Rsvp";
-import Submited from "./pages/Submited";
 import TransportOgOvernatting from "./pages/TransportOgOvernatting";
 import theme from "./theme";
 
@@ -102,7 +100,6 @@ function App() {
                   </Box>
                 }
               />
-              <Route path="/submited" element={<Submited />} />
               <Route path="/fredag" element={<Fredag />} />
               <Route path="/lørdag" element={<Loerdag />} />
               <Route path="/informasjon" element={<Informasjon />} />
@@ -110,7 +107,6 @@ function App() {
                 path="/transportogovernatting"
                 element={<TransportOgOvernatting />}
               />
-              <Route path="/rsvp" element={<Rsvp />} />
             </Routes>
           )}
         </ThemeProvider>
