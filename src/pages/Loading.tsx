@@ -1,5 +1,5 @@
 import { Box, Stack, styled } from "@mui/material";
-import SofieErlend from "../../public/SofieErlend.png";
+import FlowerBlack from "../../public/FlowerBlack.png";
 
 const Loading = ({ isLoading }: { isLoading: boolean }) => {
   return (
@@ -9,8 +9,8 @@ const Loading = ({ isLoading }: { isLoading: boolean }) => {
       justifyContent={"center"}
       height={"100%"}
     >
-      <Box>
-        <img src={SofieErlend} alt="Lukk sidemeny" width={"150px"} />
+      <Box width={{ xs: "50px", sm: "80px" }}>
+        <img src={FlowerBlack} alt="Lukk sidemeny" width={"100%"} />
       </Box>
     </StyledStack>
   );
@@ -18,11 +18,12 @@ const Loading = ({ isLoading }: { isLoading: boolean }) => {
 
 export default Loading;
 
-const StyledStack = styled(Stack)({
+const StyledStack = styled(Stack)(({ theme }) => ({
   position: "fixed",
   top: "0",
   left: "0",
   width: "100%",
   height: "100%",
   zIndex: "999999",
-});
+  backgroundColor: theme.palette.background.default,
+}));

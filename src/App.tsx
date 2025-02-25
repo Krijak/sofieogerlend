@@ -20,8 +20,6 @@ const Wrapper = ({ children }: PropsWithChildren) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("scroll-animation");
-      } else {
-        entry.target.classList.remove("scroll-animation");
       }
     });
   });
@@ -67,9 +65,11 @@ function App() {
 
     preloadImages(images)
       .then(() => {
-        setShowLoading(false);
         setTimeout(() => {
-          setIsLoaded(true);
+          setShowLoading(false);
+          setTimeout(() => {
+            setIsLoaded(true);
+          }, 500);
         }, 500);
       })
       .catch(() => {
@@ -82,8 +82,8 @@ function App() {
     <HashRouter basename={import.meta.env.BASE_URL}>
       <Wrapper>
         <ThemeProvider theme={theme}>
-          <Topbar />
           {!isLoaded && <Loading isLoading={showLoading} />}
+          <Topbar />
           {isLoaded && (
             <Routes>
               <Route
