@@ -1,4 +1,6 @@
-import * as React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { Button, Stack, styled, Typography } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -6,10 +8,8 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import MenuIcon from "@mui/icons-material/Menu";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Toolbar from "@mui/material/Toolbar";
-import { Button, Stack, styled, Typography } from "@mui/material";
+import * as React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import SofieErlend from "../../public/SofieErlend.png";
 import SofieOgErlend from "../../public/SofieOgErlend.svg";
@@ -177,8 +177,6 @@ const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
   },
   "& > .active": {
     fontWeight: "bold",
-    // border: "1px solid",
-    // borderColor: theme.palette.primary.main,
     color: theme.palette.primary.main,
   },
   "::after": {

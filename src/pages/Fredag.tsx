@@ -52,24 +52,28 @@ const Fredag = () => {
         >
           <TimeLineItem>
             <Box>
-              <Typography variant="h2" mb={2}>
+              <Typography
+                variant="h2"
+                mb={2}
+                className={"apply-scroll-animation"}
+              >
                 17 : 00 - 21 : 00
               </Typography>
-              <PraktiskInfoP>
+              <PraktiskInfoP className={"apply-scroll-animation"}>
                 Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund
                 Cruise Terminal og Ålesund Bussterminal.{" "}
                 <Link href="https://www.google.com/maps/place/Cruise+Service+Fjord+Tours/@62.4702321,6.1549915,383m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4616db8adff3c02f:0x8c2a9a50ff2ca49a!8m2!3d62.4702321!4d6.1549915!16s%2Fg%2F11svh66vns?entry=tts&g_ep=EgoyMDI1MDEyMi4wIPu8ASoASAFQAw%3D%3D">
                   Klikk her for å se sted for oppmøtested i Google Maps.
                 </Link>
               </PraktiskInfoP>
-              <PraktiskInfoP>
+              <PraktiskInfoP className={"apply-scroll-animation"}>
                 <b>Tidspunkt:</b> MS Bruvik segler kl 17:00, så møt i god tid
                 før dette!
               </PraktiskInfoP>
-              <PraktiskInfoP>
+              <PraktiskInfoP className={"apply-scroll-animation"}>
                 <b>Varighet:</b> Turen varer ca 4 timer.
               </PraktiskInfoP>
-              <Typography>
+              <Typography className={"apply-scroll-animation"}>
                 <b>Bekledning:</b> Gjerne pent, men kle dere etter været med
                 mulighet for å være ute på båten.
               </Typography>

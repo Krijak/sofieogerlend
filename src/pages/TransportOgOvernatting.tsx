@@ -1,9 +1,9 @@
 import { Box, Link, Stack, Typography } from "@mui/material";
-import SETeTwo from "../../public/SETeTwo.jpg";
 import Azores from "../../public/Azores.jpg";
 import Foss from "../../public/Foss.jpg";
-import FullWidthStack from "../Components/FullWidthStack";
+import SETeTwo from "../../public/SETeTwo.jpg";
 import AnimatedImage from "../Components/AnimatedImage";
+import FullWidthStack from "../Components/FullWidthStack";
 import PageWrapper from "../Components/PageWrapper";
 
 const TransportOgOvernatting = () => {
@@ -65,10 +65,10 @@ const TransportOgOvernatting = () => {
           flexDirection={"row"}
         >
           <Box maxWidth={"300px"}>
-            <Typography mb={1}>
+            <Typography mb={1} className={"apply-scroll-animation"}>
               <b>Buss til og fra bryllupet</b>
             </Typography>
-            <Typography>
+            <Typography className={"apply-scroll-animation"}>
               Vi setter opp en buss som kjører fra Ålesund sentrum til Giske
               Kirke før seremonien, og som kjører gjester tilbake på slutten av
               kvelden. Tidspunkter og oppmøtested vil bli oppdatert nærmere
@@ -76,20 +76,20 @@ const TransportOgOvernatting = () => {
             </Typography>
           </Box>
           <Box maxWidth={"300px"}>
-            <Typography mb={1}>
+            <Typography mb={1} className={"apply-scroll-animation"}>
               <b>Parkering</b>
             </Typography>
-            <Typography>
+            <Typography className={"apply-scroll-animation"}>
               Det er gode parkeringsmuligheter ved både ved Giske Kirke og
               bryllupslokalet Øygardshallen. Vi oppfordrer til samkjøring der
               det er mulig. Det er fullt mulig å la bilen stå til dagen etter. 
             </Typography>
           </Box>
           <Box maxWidth={"300px"} width={"100%"}>
-            <Typography mb={1}>
+            <Typography mb={1} className={"apply-scroll-animation"}>
               <b>Taxi og annen transport</b>
             </Typography>
-            <Typography>
+            <Typography className={"apply-scroll-animation"}>
               Ålesund Taxi: 70 10 30 00 <br /> Norgestaxi:  08 000 <br /> FRAM:
               Kollektivtransport i Ålesund
             </Typography>
