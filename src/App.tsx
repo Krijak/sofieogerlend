@@ -94,6 +94,14 @@ function App() {
                   </Box>
                 }
               />
+              <Route
+                path="/main"
+                element={
+                  <Box className="scroll-animation">
+                    <Main />
+                  </Box>
+                }
+              />
               <Route path="/submited" element={<Submited />} />
               <Route path="/fredag" element={<Fredag />} />
               <Route path="/lørdag" element={<Loerdag />} />

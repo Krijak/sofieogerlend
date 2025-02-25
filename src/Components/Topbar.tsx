@@ -37,7 +37,8 @@ const MenuItem = ({ title, href }: NavItem) => {
 const Topbar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const drawerWidth = 350;
-  const isOnMain = useLocation().pathname == "/";
+  const location = useLocation();
+  const isOnMain = ["/", "/main"].includes(location.pathname);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
