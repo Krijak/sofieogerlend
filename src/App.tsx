@@ -54,7 +54,7 @@ function App() {
   useEffect(() => {
     const images: string[] = [
       ...Object.values(
-        import.meta.glob("/public/*.{png,jpg,jpeg}", { eager: true })
+        import.meta.glob("/public/*.{png,jpg,jpeg,gif}", { eager: true })
       ).map((module) => (module as any).default),
       ...Object.values(
         import.meta.glob("/public/SofieErlend/*.{png,jpg,jpeg}", {
