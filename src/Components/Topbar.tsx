@@ -191,6 +191,7 @@ const StyledNavLinkWrapper = styled(Typography)(({ theme }) => ({
     flexDirection: "row",
     justifyContent: "center",
     textAlign: "center",
+    whiteSpace: "nowrap",
     ":hover": {
       color: theme.palette.primary.main,
     },
