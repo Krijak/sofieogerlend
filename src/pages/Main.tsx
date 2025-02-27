@@ -1,7 +1,7 @@
 import { Box, styled } from "@mui/material";
 import { NavLink, useLocation } from "react-router-dom";
-import SE from "../../public/SE.png";
-import SofieOgErlend from "../../public/SofieOgErlend.svg";
+import Monogram from "../../public/Monogram.png";
+import Name from "../../public/Name.svg";
 import AnimatedImage from "../Components/AnimatedImage";
 import PageWrapper from "../Components/PageWrapper";
 
@@ -18,7 +18,7 @@ const Main = () => {
     <Box className="scroll-animation">
       <PageWrapper pt={1}>
         <Box width={{ xs: "80px", sm: "100px" }}>
-          <img src={SE} alt={alt} width={"100%"} />
+          <img src={Monogram} alt={alt} width={"100%"} />
         </Box>
 
         <StyledNavLink to={location.pathname == "/" ? "/main" : "/"}>
@@ -36,7 +36,7 @@ const Main = () => {
           />
         </StyledNavLink>
         <Box width={{ xs: "200px", sm: "250px" }}>
-          <img src={SofieOgErlend} alt={alt} width={"100%"} />
+          <img src={Name} alt={alt} width={"100%"} />
         </Box>
       </PageWrapper>
     </Box>

@@ -14,7 +14,15 @@ export const FullWidthStack = (props: StackProps) => {
       }}
       {...props}
     >
-      {props.children}
+      <Stack
+        gap={4}
+        maxWidth={"900px"}
+        flexWrap={"wrap"}
+        justifyContent={"center"}
+        flexDirection={"row"}
+      >
+        {props.children}
+      </Stack>
     </Stack>
   );
 };

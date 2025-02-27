@@ -1,14 +1,16 @@
-import { PropsWithChildren, ReactNode } from "react";
 import { Box, Stack, StackProps, styled } from "@mui/material";
+import { PropsWithChildren, ReactNode } from "react";
 
 type TimelineItemType = {
   header?: ReactNode;
   isLast?: boolean;
+  noAnimation?: boolean;
 } & PropsWithChildren;
 
 export const TimeLineItem = ({
   header,
   isLast,
+  noAnimation,
   children,
   ...restProps
 }: TimelineItemType & StackProps) => {
@@ -22,7 +24,9 @@ export const TimeLineItem = ({
         {!isLast && <Line />}
       </Stack>
       <Box>
-        <Box>{children}</Box>
+        <Box className={noAnimation ? "" : "apply-scroll-animation"}>
+          {children}
+        </Box>
       </Box>
     </Stack>
   );

@@ -50,7 +50,7 @@ const Fredag = () => {
           paddingTop={{ lg: 0 }}
           alignItems={{ sm: "center", lg: "flex-start" }}
         >
-          <TimeLineItem>
+          <TimeLineItem noAnimation>
             <Box>
               <Typography
                 variant="h2"
