@@ -11,8 +11,8 @@ import ListItem from "@mui/material/ListItem";
 import Toolbar from "@mui/material/Toolbar";
 import * as React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import SofieErlend from "../../public/SofieErlend.png";
-import SofieOgErlend from "../../public/SofieOgErlend.svg";
+import Name from "../../public/Name.svg";
+import Nameandmonogram from "../../public/Nameandmonogram.png";
 
 type NavItem = {
   title: string;
@@ -80,7 +80,7 @@ const Topbar = () => {
       <Box>
         <Box mb={10}>
           <Button onClick={() => handleDrawerToggle} aria-label="Lukk sidemeny">
-            <img src={SofieErlend} alt="Lukk sidemeny" width={"150px"} />
+            <img src={Nameandmonogram} alt="Lukk sidemeny" width={"150px"} />
           </Button>
         </Box>
         <List>
@@ -122,7 +122,7 @@ const Topbar = () => {
         <Toolbar>
           {!isOnMain && (
             <Box ml={2}>
-              <img src={SofieOgErlend} width={"200px"} />
+              <img src={Name} width={"200px"} />
             </Box>
           )}
           <IconButton
