@@ -13,7 +13,6 @@ import * as React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Name from "../../public/Name.svg";
 import Nameandmonogram from "../../public/Nameandmonogram.png";
-import { Title } from "@mui/icons-material";
 
 type NavItem = {
   title: string;
