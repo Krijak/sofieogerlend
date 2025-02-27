@@ -33,10 +33,10 @@ const MenuItem = ({
         className={({ isActive }) =>
           isActive || isMainAndActive ? "active" : ""
         }
-        target={title == "Ønskeliste" || title == "Rsvp" ? "_blank" : "_self"}
+        target={["ønskeliste", "rsvp"].includes(title.toLowerCase()) ? "_blank" : "_self"}
       >
         {title}{" "}
-        {(title == "Ønskeliste" || title == "Rsvp") && <OpenInNewIcon />}
+        {["ønskeliste", "rsvp"].includes(title.toLowerCase()) && <OpenInNewIcon />}
       </NavLink>
     </StyledNavLinkWrapper>
   );
