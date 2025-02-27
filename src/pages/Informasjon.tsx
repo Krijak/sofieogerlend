@@ -32,10 +32,14 @@ const Informasjon = () => {
           Ta kontakt med{" "}
           <Link href="mailto:evastveit@gmail.com">evastveit@gmail.com</Link>
         </Typography>
+        
         <Typography variant="h2" mt={4}>
           TALER OG TOASTMASTER
         </Typography>
-        <Typography mt={1}>Informasjon kommer</Typography>
+        <Typography mt={1}>Har du lyst til å holde tale, fremføre et innslag eller si noen ord?</Typography>
+        <Typography mt={1}>Ta kontakt med vår eminente toastmaster Hans Olav Hilsen på e-post <Link href="mailto:hahilsen@gmail.com">hahilsen@gmail.com</Link> innen 30. juni.</Typography>
+        <Typography mt={0}><i>*maks fire minutter per innlegg</i></Typography>
+        
         <Typography variant="h2" mt={4}>
           DRESSCODE
         </Typography>
@@ -43,6 +47,7 @@ const Informasjon = () => {
           Mørk dress. Ta gjerne med klær for å nyte solnedgangen ved stranden
           senere på kvelden.
         </Typography>
+        
         <Typography variant="h2" mt={4}>
           KAN JEG TA MED BARN?
         </Typography>

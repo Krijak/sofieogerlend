@@ -41,12 +41,20 @@ const TransportOgOvernatting = () => {
           mulig å telte eller sove i bil ved Øygardshallen.
         </Typography>
         <Typography mt={3}>
-          Vi har fått avtale med noen av hotellene i byen: Quality Hotel
-          Waterfront. Booking gjøres via linken under innen 27. juni.{" "}
+          Vi har fått avtale med noen av hotellene i byen: 
+        </Typography>
+        <Typography mt={1}>
+        <b>Hotel Brosundet:</b> Booking gjøres via linken under innen 27. juni.{" "}
+        </Typography>
+          <Link href="https://app.mews.com/distributor/a863cd3f-e75f-4f79-bf8c-b16900836992?mewsAvailabilityBlockId=5fd2996b-52cc-42be-a3b5-b29000996b74&mewsStart=2025-08-29&mewsEnd=2025-08-31">
+            Booking Hotel Brosundet
+          </Link>
+        <Typography mt={1}>
+        <b>Quality Hotel Waterfront:</b> Booking gjøres via linken under innen 27. juni.{" "}
+        </Typography>
           <Link href="https://app.mews.com/distributor/cc78698f-2e14-44d4-8e26-b059008ecc39?mewsAvailabilityBlockId=63aaef69-15c2-4362-a37f-b27b0139f66c&mewsStart=2025-08-29&mewsEnd=2025-08-31">
             Booking Quality Hotel Waterfront
           </Link>
-        </Typography>
       </Stack>
       <Stack
         style={{ maxWidth: "800px", minWidth: "200px" }}

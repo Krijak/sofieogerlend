@@ -59,7 +59,7 @@ const Topbar = () => {
     { title: "Transport og overnatting", href: "transportogovernatting" },
     { title: "Informasjon", href: "informasjon" },
     {
-      title: "Rsvp",
+      title: "RSVP",
       href: "https://docs.google.com/forms/d/e/1FAIpQLSdBsYysWmlnovduxWR2RICMEsIk0uOwYEiuFoqTrgld8U3RZw/viewform?usp=sharing",
     },
     { title: "Ønskeliste", href: "https://onsk.no/lister/km8-4le" },
