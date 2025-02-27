@@ -9,7 +9,7 @@ const TimeLine = () => {
   return (
     <Box padding={6} pt={3}>
       <TimeLineItem header={<Typography variant="h2">13 : 00</Typography>}>
-        <Box mb={4} className={"apply-scroll-animation"}>
+        <Box mb={4}>
           <Typography variant="h2">VIELSE</Typography>
           <Typography>
             Giske Kirke
@@ -21,7 +21,7 @@ const TimeLine = () => {
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">14 : 30</Typography>}>
-        <Box pb={4} className={"apply-scroll-animation"}>
+        <Box pb={4}>
           <Typography variant="h2">BRYLLUPSFEST</Typography>
           <Typography>
             Øygardshallen
@@ -33,35 +33,25 @@ const TimeLine = () => {
         </Box>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
-        <Typography marginBottom={2} className={"apply-scroll-animation"}>
-          Leker
-        </Typography>
+        <Typography marginBottom={2}>Leker</Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">16 : 00</Typography>}>
-        <Typography marginBottom={2} className={"apply-scroll-animation"}>
-          Bordsetting
-        </Typography>
+        <Typography marginBottom={2}>Bordsetting</Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">20 : 00</Typography>}>
-        <Typography marginBottom={2} className={"apply-scroll-animation"}>
-          Kaffe og kaker
-        </Typography>
+        <Typography marginBottom={2}>Kaffe og kaker</Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">21 : 00</Typography>}>
-        <Typography marginBottom={2} className={"apply-scroll-animation"}>
-          Solnedgang ute
-        </Typography>
+        <Typography marginBottom={2}>Solnedgang ute</Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">21 : 30</Typography>}>
-        <Typography marginBottom={2} className={"apply-scroll-animation"}>
-          Fest og moro
-        </Typography>
+        <Typography marginBottom={2}>Fest og moro</Typography>
       </TimeLineItem>
       <TimeLineItem
         isLast
         header={<Typography variant="h2">02 : 00</Typography>}
       >
-        <Typography marginBottom={2} className={"apply-scroll-animation"}>
+        <Typography marginBottom={2}>
           Busstransport til Ålesund sentrum
         </Typography>
       </TimeLineItem>
@@ -100,7 +90,7 @@ const Loerdag = () => {
           justifyContent={"center"}
           gap={2}
         >
-          <AnimatedImage alt="Giske kirke" src={KirkeLandskap} />
+          <AnimatedImage alt="Giske kirke, interør" src={KirkeLandskap} />
           <Typography
             alignSelf={"flex-end"}
             sx={{ opacity: "0.5" }}
