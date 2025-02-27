@@ -13,11 +13,27 @@ import * as React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Name from "../../public/Name.svg";
 import Nameandmonogram from "../../public/Nameandmonogram.png";
+import { Title } from "@mui/icons-material";
 
 type NavItem = {
   title: string;
   href: string;
 };
+const onskeliste = "Ønskeliste"
+const rsvp = "RSVP"
+const externalLinks = [onskeliste, rsvp];
+const navItems: NavItem[] = [
+  { title: "Hjem", href: "/" },
+  { title: "Fredag", href: "fredag" },
+  { title: "Lørdag", href: "lørdag" },
+  { title: "Transport og overnatting", href: "transportogovernatting" },
+  { title: "Informasjon", href: "informasjon" },
+  {
+    title: rsvp,
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSdBsYysWmlnovduxWR2RICMEsIk0uOwYEiuFoqTrgld8U3RZw/viewform?usp=sharing",
+  },
+  { title: onskeliste, href: "https://onsk.no/lister/km8-4le" },
+];
 
 const MenuItem = ({
   title,
@@ -25,6 +41,7 @@ const MenuItem = ({
   locationPath,
 }: NavItem & { locationPath: string }) => {
   const isMainAndActive = href == "/" && locationPath == "/main";
+  const isExternal = externalLinks.includes(title);
   return (
     <StyledNavLinkWrapper display={"inline"} title={title}>
       <NavLink
@@ -33,10 +50,10 @@ const MenuItem = ({
         className={({ isActive }) =>
           isActive || isMainAndActive ? "active" : ""
         }
-        target={title == "Ønskeliste" || title == "Rsvp" ? "_blank" : "_self"}
+        target={isExternal ? "_blank" : "_self"}
       >
         {title}{" "}
-        {(title == "Ønskeliste" || title == "Rsvp") && <OpenInNewIcon />}
+        {isExternal && <OpenInNewIcon />}
       </NavLink>
     </StyledNavLinkWrapper>
   );
@@ -51,19 +68,6 @@ const Topbar = () => {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
-  const navItems: NavItem[] = [
-    { title: "Hjem", href: "/" },
-    { title: "Fredag", href: "fredag" },
-    { title: "Lørdag", href: "lørdag" },
-    { title: "Transport og overnatting", href: "transportogovernatting" },
-    { title: "Informasjon", href: "informasjon" },
-    {
-      title: "RSVP",
-      href: "https://docs.google.com/forms/d/e/1FAIpQLSdBsYysWmlnovduxWR2RICMEsIk0uOwYEiuFoqTrgld8U3RZw/viewform?usp=sharing",
-    },
-    { title: "Ønskeliste", href: "https://onsk.no/lister/km8-4le" },
-  ];
 
   const drawer = (
     <Stack
