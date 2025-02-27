@@ -90,7 +90,7 @@ const Loerdag = () => {
           justifyContent={"center"}
           gap={2}
         >
-          <AnimatedImage alt="Giske kirke, interør" src={KirkeLandskap} />
+          <AnimatedImage alt="Giske kirke" src={KirkeLandskap} />
           <Typography
             alignSelf={"flex-end"}
             sx={{ opacity: "0.5" }}
