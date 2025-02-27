@@ -19,7 +19,9 @@ type NavItem = {
   title: string;
   href: string;
 };
-
+const onskeliste = "Ønskeliste"
+const rsvp = "RSVP"
+const externalLinks = [onskeliste, rsvp];
 const navItems: NavItem[] = [
   { title: "Hjem", href: "/" },
   { title: "Fredag", href: "fredag" },
@@ -27,10 +29,10 @@ const navItems: NavItem[] = [
   { title: "Transport og overnatting", href: "transportogovernatting" },
   { title: "Informasjon", href: "informasjon" },
   {
-    title: "RSVP",
+    title: rsvp,
     href: "https://docs.google.com/forms/d/e/1FAIpQLSdBsYysWmlnovduxWR2RICMEsIk0uOwYEiuFoqTrgld8U3RZw/viewform?usp=sharing",
   },
-  { title: "Ønskeliste", href: "https://onsk.no/lister/km8-4le" },
+  { title: onskeliste, href: "https://onsk.no/lister/km8-4le" },
 ];
 
 const MenuItem = ({
@@ -39,8 +41,7 @@ const MenuItem = ({
   locationPath,
 }: NavItem & { locationPath: string }) => {
   const isMainAndActive = href == "/" && locationPath == "/main";
-  const externalLinks = ["ønskeliste", "rsvp"];
-  const isExternal = externalLinks.includes(title.toLowerCase());
+  const isExternal = externalLinks.includes(title);
   return (
     <StyledNavLinkWrapper display={"inline"} title={title}>
       <NavLink
