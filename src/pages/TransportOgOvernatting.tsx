@@ -44,7 +44,7 @@ const TransportOgOvernatting = () => {
           Vi har fått avtale med noen av hotellene i byen: 
         </Typography>
         <Typography mt={1}>
-        <b>Hotel Brosundet:</b> Booking gjøres via linken under innen 27. juni.{" "}
+        <b>Hotel Brosundet:</b> Booking gjøres via linken under innen 18. mai.{" "}
         </Typography>
           <Link href="https://app.mews.com/distributor/a863cd3f-e75f-4f79-bf8c-b16900836992?mewsAvailabilityBlockId=5fd2996b-52cc-42be-a3b5-b29000996b74&mewsStart=2025-08-29&mewsEnd=2025-08-31">
             Booking Hotel Brosundet
