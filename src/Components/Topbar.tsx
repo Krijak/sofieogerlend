@@ -31,7 +31,10 @@ const navItems: NavItem[] = [
     title: rsvp,
     href: "https://docs.google.com/forms/d/e/1FAIpQLSdBsYysWmlnovduxWR2RICMEsIk0uOwYEiuFoqTrgld8U3RZw/viewform?usp=sharing",
   },
-  { title: onskeliste, href: "https://onsk.no/lister/km8-4le" },
+  {
+    title: onskeliste,
+    href: "https://www.onsk.no/lister/vgr-66d?s=%24device%3A194a2cbdeef429-0cc422902c6154-26011851-144000-194a2cbdeef429",
+  },
 ];
 
 const MenuItem = ({
