@@ -35,10 +35,10 @@ const Fredag = () => {
                 innover fantastiske Hjørundfjorden. Her vil man kunne se kremen
                 av Sunnmøre - både fjord og fjell. Dette blir en fin anledning
                 til å bli bedre kjent med bryllupsgjestene og vi ønsker at så
-                mange som mulig tar seg tid til dette. Det blir servert en
-                velkomstdrink og noe lett bespisning underveis. Båten har to
-                salonger, bar på øvre dekk og et stort utedekk akter. Vi håper
-                så mange som mulig vil bli med oss på turen!
+                mange som mulig tar seg tid til dette. Det blir servert
+                velkomstdrink og noe enkel servering. Båten har to salonger, bar
+                på øvre dekk og et stort utedekk akter. Vi håper så mange som
+                mulig vil bli med oss på turen!
               </Typography>
             </Stack>
           </Stack>
@@ -71,7 +71,7 @@ const Fredag = () => {
                 før dette!
               </PraktiskInfoP>
               <PraktiskInfoP className={"apply-scroll-animation"}>
-                <b>Varighet:</b> Turen varer ca 4 timer.
+                <b>Varighet:</b> Turen varer ca 4 timer. Møt opp gode og mette!
               </PraktiskInfoP>
               <Typography className={"apply-scroll-animation"}>
                 <b>Bekledning:</b> Gjerne pent, men kle dere etter været med
