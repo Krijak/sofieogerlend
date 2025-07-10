@@ -8,6 +8,11 @@ import TimeLineItem from "../Components/TimeLineItem";
 const TimeLine = () => {
   return (
     <Box padding={6} pt={3}>
+      <TimeLineItem header={<Typography variant="h2">12 : 15</Typography>}>
+        <Typography marginBottom={2}>
+          Avreise busstransport fra Ålesund rutebilstasjon til Giske Kirke
+        </Typography>
+      </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">13 : 00</Typography>}>
         <Box mb={4}>
           <Typography variant="h2">VIELSE</Typography>
@@ -19,6 +24,11 @@ const TimeLine = () => {
             </Link>
           </Typography>
         </Box>
+      </TimeLineItem>
+      <TimeLineItem header={<Typography variant="h2">14 : 15</Typography>}>
+        <Typography marginBottom={2}>
+          Busstransport Giske Kirke til Øygardshallen
+        </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">14 : 30</Typography>}>
         <Box pb={4}>
@@ -32,8 +42,8 @@ const TimeLine = () => {
           </Typography>
         </Box>
       </TimeLineItem>
-      <TimeLineItem header={<Typography variant="h2">15 : 00</Typography>}>
-        <Typography marginBottom={2}>Leker</Typography>
+      <TimeLineItem header={<Typography variant="h2">14 : 30</Typography>}>
+        <Typography marginBottom={2}>Enkel servering og kaffe</Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">16 : 00</Typography>}>
         <Typography marginBottom={2}>Bordsetting</Typography>
@@ -47,12 +57,19 @@ const TimeLine = () => {
       <TimeLineItem header={<Typography variant="h2">21 : 30</Typography>}>
         <Typography marginBottom={2}>Fest og moro</Typography>
       </TimeLineItem>
+      <TimeLineItem header={<Typography variant="h2">01 : 00</Typography>}>
+        <Typography marginBottom={2}>
+          Første busstransport fra Øygardshallen til Ålesund rutebilstasjon
+          (maks 52 pers)
+        </Typography>
+      </TimeLineItem>
       <TimeLineItem
         isLast
         header={<Typography variant="h2">02 : 00</Typography>}
       >
         <Typography marginBottom={2}>
-          Busstransport til Ålesund sentrum
+          Andre busstransport fra Øygardshallen til Ålesund rutebilstasjon (maks
+          52 pers)
         </Typography>
       </TimeLineItem>
     </Box>
@@ -78,8 +95,7 @@ const Loerdag = () => {
           <Typography>
             Vielsen blir ved vakre Giske Kirke. Det vil bli arrangert felles
             transport fra Ålesund sentrum. Etter vielsen drar vi over til
-            Øygardshallen hvor den store bryllupsfesten skal være. Her vil det
-            serveres noe lett bespisning ved ankomst.
+            Øygardshallen hvor den store bryllupsfesten skal være.
           </Typography>
         </Box>
 
