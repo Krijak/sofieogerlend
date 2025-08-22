@@ -11,6 +11,10 @@ const TimeLine = () => {
       <TimeLineItem header={<Typography variant="h2">12 : 15</Typography>}>
         <Typography marginBottom={2}>
           Avreise busstransport fra Ålesund rutebilstasjon til Giske Kirke
+          <br />
+          <Link mb={4} href="https://maps.app.goo.gl/2Kis1wv8VSSQwvoy9">
+            Ålesund rutebilstasjon
+          </Link>
         </Typography>
       </TimeLineItem>
       <TimeLineItem header={<Typography variant="h2">13 : 00</Typography>}>
