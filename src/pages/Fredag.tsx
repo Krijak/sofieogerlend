@@ -60,8 +60,8 @@ const Fredag = () => {
                 17 : 00 - 21 : 00
               </Typography>
               <PraktiskInfoP className={"apply-scroll-animation"}>
-                Sted for oppmøte: "Rådhuskaia" flytebrygge like ved Ålesund
-                Cruise Terminal og Ålesund Bussterminal.{" "}
+                Sted for oppmøte: "Rådhuskaia" like ved Ålesund Cruise Terminal
+                og Ålesund rutebilstasjon. <br />
                 <Link href="https://www.google.com/maps/place/Cruise+Service+Fjord+Tours/@62.4702321,6.1549915,383m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4616db8adff3c02f:0x8c2a9a50ff2ca49a!8m2!3d62.4702321!4d6.1549915!16s%2Fg%2F11svh66vns?entry=tts&g_ep=EgoyMDI1MDEyMi4wIPu8ASoASAFQAw%3D%3D">
                   Klikk her for å se sted for oppmøtested i Google Maps.
                 </Link>
